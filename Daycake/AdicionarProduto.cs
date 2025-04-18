@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class Login: Form
+    public partial class AdicionarProduto: Form
     {
-        public Login()
+        public AdicionarProduto()
         {
             InitializeComponent();
         }
 
-        private void lblSenha_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

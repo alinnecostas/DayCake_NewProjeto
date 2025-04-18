@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnsCadastroCliente = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsAgendamentos = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsRecebimentos = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsConsultaClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsConsultaAgendamentos = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnsStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsPedidos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsSair = new System.Windows.Forms.ToolStripMenuItem();
             this.picImage = new System.Windows.Forms.PictureBox();
+            this.mnsCadastro = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAgendarPedido = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsConsultarPedidos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsRecebimentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsProducao = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsAdicionarProduto = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsListaProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
@@ -44,12 +49,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnsCadastroCliente,
-            this.mnsAgendamentos,
-            this.mnsConsultaAgendamentos,
-            this.mnsConsultaClientes,
-            this.mnsRecebimentos,
-            this.mnsStatus,
+            this.mnsCliente,
+            this.mnsPedidos,
+            this.mnsProducao,
             this.mnsSair});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -57,41 +59,24 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mnsCadastroCliente
+            // mnsCliente
             // 
-            this.mnsCadastroCliente.Name = "mnsCadastroCliente";
-            this.mnsCadastroCliente.Size = new System.Drawing.Size(106, 20);
-            this.mnsCadastroCliente.Text = "Cadastro Cliente";
+            this.mnsCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsCadastro,
+            this.mnsClientes});
+            this.mnsCliente.Name = "mnsCliente";
+            this.mnsCliente.Size = new System.Drawing.Size(56, 20);
+            this.mnsCliente.Text = "Cliente";
             // 
-            // mnsAgendamentos
+            // mnsPedidos
             // 
-            this.mnsAgendamentos.Name = "mnsAgendamentos";
-            this.mnsAgendamentos.Size = new System.Drawing.Size(100, 20);
-            this.mnsAgendamentos.Text = "Agendamentos";
-            // 
-            // mnsRecebimentos
-            // 
-            this.mnsRecebimentos.Name = "mnsRecebimentos";
-            this.mnsRecebimentos.Size = new System.Drawing.Size(94, 20);
-            this.mnsRecebimentos.Text = "Recebimentos";
-            // 
-            // mnsConsultaClientes
-            // 
-            this.mnsConsultaClientes.Name = "mnsConsultaClientes";
-            this.mnsConsultaClientes.Size = new System.Drawing.Size(111, 20);
-            this.mnsConsultaClientes.Text = "Consulta Clientes";
-            // 
-            // mnsConsultaAgendamentos
-            // 
-            this.mnsConsultaAgendamentos.Name = "mnsConsultaAgendamentos";
-            this.mnsConsultaAgendamentos.Size = new System.Drawing.Size(150, 20);
-            this.mnsConsultaAgendamentos.Text = "Consulta Agendamentos";
-            // 
-            // mnsStatus
-            // 
-            this.mnsStatus.Name = "mnsStatus";
-            this.mnsStatus.Size = new System.Drawing.Size(51, 20);
-            this.mnsStatus.Text = "Status";
+            this.mnsPedidos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAgendarPedido,
+            this.mnsConsultarPedidos,
+            this.mnsRecebimentos});
+            this.mnsPedidos.Name = "mnsPedidos";
+            this.mnsPedidos.Size = new System.Drawing.Size(61, 20);
+            this.mnsPedidos.Text = "Pedidos";
             // 
             // mnsSair
             // 
@@ -107,6 +92,64 @@
             this.picImage.Size = new System.Drawing.Size(800, 426);
             this.picImage.TabIndex = 1;
             this.picImage.TabStop = false;
+            // 
+            // mnsCadastro
+            // 
+            this.mnsCadastro.Name = "mnsCadastro";
+            this.mnsCadastro.Size = new System.Drawing.Size(121, 22);
+            this.mnsCadastro.Text = "Cadastro";
+            // 
+            // mnsClientes
+            // 
+            this.mnsClientes.Name = "mnsClientes";
+            this.mnsClientes.Size = new System.Drawing.Size(121, 22);
+            this.mnsClientes.Text = "Clientes";
+            // 
+            // mnsAgendarPedido
+            // 
+            this.mnsAgendarPedido.Name = "mnsAgendarPedido";
+            this.mnsAgendarPedido.Size = new System.Drawing.Size(180, 22);
+            this.mnsAgendarPedido.Text = "Agendar Pedido";
+            // 
+            // mnsConsultarPedidos
+            // 
+            this.mnsConsultarPedidos.Name = "mnsConsultarPedidos";
+            this.mnsConsultarPedidos.Size = new System.Drawing.Size(180, 22);
+            this.mnsConsultarPedidos.Text = "Consultar Pedidos";
+            // 
+            // mnsRecebimentos
+            // 
+            this.mnsRecebimentos.Name = "mnsRecebimentos";
+            this.mnsRecebimentos.Size = new System.Drawing.Size(180, 22);
+            this.mnsRecebimentos.Text = "Recebimentos";
+            // 
+            // mnsProducao
+            // 
+            this.mnsProducao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnsAdicionarProduto,
+            this.mnsListaProdutos,
+            this.mnsStatus});
+            this.mnsProducao.Name = "mnsProducao";
+            this.mnsProducao.Size = new System.Drawing.Size(70, 20);
+            this.mnsProducao.Text = "Produção";
+            // 
+            // mnsAdicionarProduto
+            // 
+            this.mnsAdicionarProduto.Name = "mnsAdicionarProduto";
+            this.mnsAdicionarProduto.Size = new System.Drawing.Size(180, 22);
+            this.mnsAdicionarProduto.Text = "Adicionar Produto";
+            // 
+            // mnsStatus
+            // 
+            this.mnsStatus.Name = "mnsStatus";
+            this.mnsStatus.Size = new System.Drawing.Size(180, 22);
+            this.mnsStatus.Text = "Status";
+            // 
+            // mnsListaProdutos
+            // 
+            this.mnsListaProdutos.Name = "mnsListaProdutos";
+            this.mnsListaProdutos.Size = new System.Drawing.Size(180, 22);
+            this.mnsListaProdutos.Text = "Lista Produtos";
             // 
             // Menu
             // 
@@ -129,13 +172,18 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mnsCadastroCliente;
-        private System.Windows.Forms.ToolStripMenuItem mnsAgendamentos;
-        private System.Windows.Forms.ToolStripMenuItem mnsRecebimentos;
-        private System.Windows.Forms.ToolStripMenuItem mnsConsultaClientes;
-        private System.Windows.Forms.ToolStripMenuItem mnsConsultaAgendamentos;
-        private System.Windows.Forms.ToolStripMenuItem mnsStatus;
+        private System.Windows.Forms.ToolStripMenuItem mnsCliente;
+        private System.Windows.Forms.ToolStripMenuItem mnsPedidos;
         private System.Windows.Forms.ToolStripMenuItem mnsSair;
         private System.Windows.Forms.PictureBox picImage;
+        private System.Windows.Forms.ToolStripMenuItem mnsCadastro;
+        private System.Windows.Forms.ToolStripMenuItem mnsClientes;
+        private System.Windows.Forms.ToolStripMenuItem mnsAgendarPedido;
+        private System.Windows.Forms.ToolStripMenuItem mnsConsultarPedidos;
+        private System.Windows.Forms.ToolStripMenuItem mnsRecebimentos;
+        private System.Windows.Forms.ToolStripMenuItem mnsProducao;
+        private System.Windows.Forms.ToolStripMenuItem mnsAdicionarProduto;
+        private System.Windows.Forms.ToolStripMenuItem mnsListaProdutos;
+        private System.Windows.Forms.ToolStripMenuItem mnsStatus;
     }
 }

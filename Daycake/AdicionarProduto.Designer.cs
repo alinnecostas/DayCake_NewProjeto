@@ -1,6 +1,6 @@
 ﻿namespace Daycake
 {
-    partial class AdicionarProduto
+    partial class FormProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,8 @@
             this.lblTempoPreparo = new System.Windows.Forms.Label();
             this.mtxTempoPreparo = new System.Windows.Forms.MaskedTextBox();
             this.gbxAtivoInativo = new System.Windows.Forms.GroupBox();
-            this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.rdbInativo = new System.Windows.Forms.RadioButton();
+            this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
             this.gbxAtivoInativo.SuspendLayout();
             this.SuspendLayout();
@@ -82,10 +82,9 @@
             this.lblNomeCompleto.AutoSize = true;
             this.lblNomeCompleto.Location = new System.Drawing.Point(49, 92);
             this.lblNomeCompleto.Name = "lblNomeCompleto";
-            this.lblNomeCompleto.Size = new System.Drawing.Size(85, 13);
+            this.lblNomeCompleto.Size = new System.Drawing.Size(93, 13);
             this.lblNomeCompleto.TabIndex = 4;
-            this.lblNomeCompleto.Text = "Nome Completo:";
-            this.lblNomeCompleto.Click += new System.EventHandler(this.label1_Click);
+            this.lblNomeCompleto.Text = "Nome do Produto:";
             // 
             // txtNomeCompleto
             // 
@@ -139,6 +138,17 @@
             this.gbxAtivoInativo.TabStop = false;
             this.gbxAtivoInativo.Text = "Ativo / Inativo";
             // 
+            // rdbInativo
+            // 
+            this.rdbInativo.AutoSize = true;
+            this.rdbInativo.Location = new System.Drawing.Point(18, 46);
+            this.rdbInativo.Name = "rdbInativo";
+            this.rdbInativo.Size = new System.Drawing.Size(57, 17);
+            this.rdbInativo.TabIndex = 1;
+            this.rdbInativo.TabStop = true;
+            this.rdbInativo.Text = "Inativo";
+            this.rdbInativo.UseVisualStyleBackColor = true;
+            // 
             // rdbAtivo
             // 
             this.rdbAtivo.AutoSize = true;
@@ -150,18 +160,6 @@
             this.rdbAtivo.Text = "Ativo";
             this.rdbAtivo.UseVisualStyleBackColor = true;
             // 
-            // rdbInativo
-            // 
-            this.rdbInativo.AutoSize = true;
-            this.rdbInativo.Location = new System.Drawing.Point(18, 46);
-            this.rdbInativo.Name = "rdbInativo";
-            this.rdbInativo.Size = new System.Drawing.Size(57, 17);
-            this.rdbInativo.TabIndex = 1;
-            this.rdbInativo.TabStop = true;
-            this.rdbInativo.Text = "Inativo";
-            this.rdbInativo.UseVisualStyleBackColor = true;
-            this.rdbInativo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
             // btnCadastrarProduto
             // 
             this.btnCadastrarProduto.Location = new System.Drawing.Point(252, 361);
@@ -171,7 +169,7 @@
             this.btnCadastrarProduto.Text = "Cadastrar";
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
             // 
-            // AdicionarProduto
+            // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,7 +186,7 @@
             this.Controls.Add(this.mtxIdProduto);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.lblIdProduto);
-            this.Name = "AdicionarProduto";
+            this.Name = "FormProduto";
             this.Text = "AdicionarProduto";
             this.gbxAtivoInativo.ResumeLayout(false);
             this.gbxAtivoInativo.PerformLayout();

@@ -52,17 +52,35 @@
     <Compile Include="AdicionarProduto.Designer.cs">
       <DependentUpon>AdicionarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
+    <Compile Include="AdicionarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <Compile Include="AdicionarPedido.Designer.cs">
+      <DependentUpon>AdicionarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastroCliente.Designer.cs">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaClientes.Designer.cs">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPedidos.Designer.cs">
+      <DependentUpon>ListaPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProdutos.Designer.cs">
+      <DependentUpon>ListaProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -81,11 +99,20 @@
     <EmbeddedResource Include="AdicionarProduto.resx">
       <DependentUpon>AdicionarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="AdicionarPedido.resx">
+      <DependentUpon>AdicionarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaClientes.resx">
+      <DependentUpon>ListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPedidos.resx">
+      <DependentUpon>ListaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaProdutos.resx">
+      <DependentUpon>ListaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

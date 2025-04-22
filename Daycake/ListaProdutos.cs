@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class Pedido: Form
+    public partial class FormListaProdutos : Form
     {
-        public Pedido()
+        public FormListaProdutos()
         {
             InitializeComponent();
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

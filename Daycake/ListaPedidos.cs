@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class FormProduto: Form
+    public partial class FormListaPedidos : Form
     {
-        public FormProduto()
+        public FormListaPedidos()
         {
             InitializeComponent();
         }

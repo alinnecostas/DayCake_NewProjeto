@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class CadastroCliente: Form
+    public partial class FormCadastroCliente: Form
     {
-        public CadastroCliente()
+        public FormCadastroCliente()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Daycake
 {
-    partial class CadastroCliente
+    partial class FormCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -185,6 +185,7 @@
             this.btnCadastrar.TabIndex = 16;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // picLogotipo
             // 
@@ -194,7 +195,7 @@
             this.picLogotipo.TabIndex = 17;
             this.picLogotipo.TabStop = false;
             // 
-            // CadastroCliente
+            // FormCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,7 +218,7 @@
             this.Controls.Add(this.lblDatacadastro);
             this.Controls.Add(this.mtxIdcliente);
             this.Controls.Add(this.lblIdCliente);
-            this.Name = "CadastroCliente";
+            this.Name = "FormCadastroCliente";
             this.Text = "CadastroCliente";
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).EndInit();
             this.ResumeLayout(false);

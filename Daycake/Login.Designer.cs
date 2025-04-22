@@ -1,6 +1,6 @@
 ﻿namespace Daycake
 {
-    partial class Login
+    partial class FormLogin
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -76,7 +76,6 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(193, 20);
             this.txtSenha.TabIndex = 4;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // lblSenha
             // 
@@ -88,7 +87,6 @@
             this.lblSenha.Size = new System.Drawing.Size(43, 17);
             this.lblSenha.TabIndex = 3;
             this.lblSenha.Text = "Senha";
-            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
             // 
             // btnAcessar
             // 
@@ -104,8 +102,9 @@
             this.btnAcessar.TabIndex = 5;
             this.btnAcessar.Text = "Acessar";
             this.btnAcessar.UseVisualStyleBackColor = false;
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
-            // Login
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +118,7 @@
             this.Controls.Add(this.picLogo);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login de acesso";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

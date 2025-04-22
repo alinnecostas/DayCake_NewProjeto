@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class Login: Form
+    public partial class FormLogin: Form
     {
-        public Login()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
-        private void lblSenha_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
+        private void btnAcessar_Click(object sender, EventArgs e)
         {
 
         }

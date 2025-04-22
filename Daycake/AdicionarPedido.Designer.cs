@@ -1,6 +1,6 @@
 ﻿namespace Daycake
 {
-    partial class Pedido
+    partial class FormPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,6 @@
             this.lblObservacoes = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbxTipoDoce = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lvwListaDoce = new System.Windows.Forms.ListView();
             this.btnAdicionar = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@
             this.mtxDataEntrega = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.mtxDataPedido = new System.Windows.Forms.MaskedTextBox();
+            this.cbxFormaPagamento = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -123,9 +123,9 @@
             this.lblFormaPagamento.AutoSize = true;
             this.lblFormaPagamento.Location = new System.Drawing.Point(32, 153);
             this.lblFormaPagamento.Name = "lblFormaPagamento";
-            this.lblFormaPagamento.Size = new System.Drawing.Size(111, 13);
+            this.lblFormaPagamento.Size = new System.Drawing.Size(34, 13);
             this.lblFormaPagamento.TabIndex = 10;
-            this.lblFormaPagamento.Text = "Forma de Pagamento:";
+            this.lblFormaPagamento.Text = "Valor:";
             // 
             // txtFormaPagamento
             // 
@@ -167,13 +167,6 @@
             this.cbxTipoDoce.Name = "cbxTipoDoce";
             this.cbxTipoDoce.Size = new System.Drawing.Size(200, 21);
             this.cbxTipoDoce.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(266, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 17;
             // 
             // label4
             // 
@@ -235,18 +228,26 @@
             this.mtxDataPedido.Size = new System.Drawing.Size(197, 20);
             this.mtxDataPedido.TabIndex = 25;
             // 
-            // Pedido
+            // cbxFormaPagamento
+            // 
+            this.cbxFormaPagamento.FormattingEnabled = true;
+            this.cbxFormaPagamento.Location = new System.Drawing.Point(266, 172);
+            this.cbxFormaPagamento.Name = "cbxFormaPagamento";
+            this.cbxFormaPagamento.Size = new System.Drawing.Size(197, 21);
+            this.cbxFormaPagamento.TabIndex = 26;
+            // 
+            // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 482);
+            this.Controls.Add(this.cbxFormaPagamento);
             this.Controls.Add(this.mtxDataPedido);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.mtxDataEntrega);
             this.Controls.Add(this.btnCadastrarPedido);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lvwListaDoce);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblObservacoes);
@@ -262,7 +263,7 @@
             this.Controls.Add(this.lblIdPedido);
             this.Controls.Add(this.mtxIdPedido);
             this.Controls.Add(this.label1);
-            this.Name = "Pedido";
+            this.Name = "FormPedido";
             this.Text = "Pedido";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,7 +286,6 @@
         private System.Windows.Forms.Label lblObservacoes;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cbxTipoDoce;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView lvwListaDoce;
         private System.Windows.Forms.Button btnAdicionar;
@@ -293,5 +293,6 @@
         private System.Windows.Forms.MaskedTextBox mtxDataEntrega;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox mtxDataPedido;
+        private System.Windows.Forms.ComboBox cbxFormaPagamento;
     }
 }

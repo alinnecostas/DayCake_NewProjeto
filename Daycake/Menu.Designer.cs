@@ -95,22 +95,23 @@
             // mnsAgendarPedido
             // 
             this.mnsAgendarPedido.Name = "mnsAgendarPedido";
-            this.mnsAgendarPedido.Size = new System.Drawing.Size(170, 22);
+            this.mnsAgendarPedido.Size = new System.Drawing.Size(180, 22);
             this.mnsAgendarPedido.Text = "Agendar Pedido";
             this.mnsAgendarPedido.Click += new System.EventHandler(this.mnsAgendarPedido_Click);
             // 
             // mnsConsultarPedidos
             // 
             this.mnsConsultarPedidos.Name = "mnsConsultarPedidos";
-            this.mnsConsultarPedidos.Size = new System.Drawing.Size(170, 22);
+            this.mnsConsultarPedidos.Size = new System.Drawing.Size(180, 22);
             this.mnsConsultarPedidos.Text = "Consultar Pedidos";
             this.mnsConsultarPedidos.Click += new System.EventHandler(this.mnsConsultarPedidos_Click);
             // 
             // mnsRecebimentos
             // 
             this.mnsRecebimentos.Name = "mnsRecebimentos";
-            this.mnsRecebimentos.Size = new System.Drawing.Size(170, 22);
+            this.mnsRecebimentos.Size = new System.Drawing.Size(180, 22);
             this.mnsRecebimentos.Text = "Recebimentos";
+            this.mnsRecebimentos.Click += new System.EventHandler(this.mnsRecebimentos_Click);
             // 
             // mnsProducao
             // 

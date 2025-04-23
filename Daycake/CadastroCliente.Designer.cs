@@ -38,12 +38,12 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.mtxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.picLogotipo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picLogotipo)).BeginInit();
@@ -129,12 +129,12 @@
             this.lblEndereco.TabIndex = 8;
             this.lblEndereco.Text = "Endereço:";
             // 
-            // textBox1
+            // txtNumero
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 283);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtNumero.Location = new System.Drawing.Point(287, 283);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(79, 20);
+            this.txtNumero.TabIndex = 11;
             // 
             // lblNumero
             // 
@@ -170,20 +170,21 @@
             this.lblTelefone.TabIndex = 14;
             this.lblTelefone.Text = "Telefone:";
             // 
-            // mtxTelefone
+            // mtbTelefone
             // 
-            this.mtxTelefone.Location = new System.Drawing.Point(213, 333);
-            this.mtxTelefone.Name = "mtxTelefone";
-            this.mtxTelefone.Size = new System.Drawing.Size(153, 20);
-            this.mtxTelefone.TabIndex = 15;
+            this.mtbTelefone.Location = new System.Drawing.Point(213, 333);
+            this.mtbTelefone.Mask = "(99) 00000-0000";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(153, 20);
+            this.mtbTelefone.TabIndex = 15;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(291, 391);
+            this.btnCadastrar.Location = new System.Drawing.Point(247, 380);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(119, 34);
             this.btnCadastrar.TabIndex = 16;
-            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Text = "Cadastrar/Atualizar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -202,11 +203,11 @@
             this.ClientSize = new System.Drawing.Size(423, 450);
             this.Controls.Add(this.picLogotipo);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.mtxTelefone);
+            this.Controls.Add(this.mtbTelefone);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.lblEndereco);
@@ -238,12 +239,12 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label lblEndereco;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblTelefone;
-        private System.Windows.Forms.MaskedTextBox mtxTelefone;
+        private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.PictureBox picLogotipo;
     }

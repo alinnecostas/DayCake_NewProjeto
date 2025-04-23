@@ -30,14 +30,14 @@
         {
             this.lblIdProduto = new System.Windows.Forms.Label();
             this.lblPreco = new System.Windows.Forms.Label();
-            this.mtxIdProduto = new System.Windows.Forms.MaskedTextBox();
-            this.mtxPreco = new System.Windows.Forms.MaskedTextBox();
+            this.mtbIdProduto = new System.Windows.Forms.MaskedTextBox();
+            this.mtbPreco = new System.Windows.Forms.MaskedTextBox();
             this.lblNomeCompleto = new System.Windows.Forms.Label();
-            this.txtNomeCompleto = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblTempoPreparo = new System.Windows.Forms.Label();
-            this.mtxTempoPreparo = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTempoPreparo = new System.Windows.Forms.MaskedTextBox();
             this.gbxAtivoInativo = new System.Windows.Forms.GroupBox();
             this.rdbInativo = new System.Windows.Forms.RadioButton();
             this.rdbAtivo = new System.Windows.Forms.RadioButton();
@@ -63,19 +63,19 @@
             this.lblPreco.TabIndex = 1;
             this.lblPreco.Text = "Preço:";
             // 
-            // mtxIdProduto
+            // mtbIdProduto
             // 
-            this.mtxIdProduto.Location = new System.Drawing.Point(52, 51);
-            this.mtxIdProduto.Name = "mtxIdProduto";
-            this.mtxIdProduto.Size = new System.Drawing.Size(140, 20);
-            this.mtxIdProduto.TabIndex = 2;
+            this.mtbIdProduto.Location = new System.Drawing.Point(52, 51);
+            this.mtbIdProduto.Name = "mtbIdProduto";
+            this.mtbIdProduto.Size = new System.Drawing.Size(140, 20);
+            this.mtbIdProduto.TabIndex = 2;
             // 
-            // mtxPreco
+            // mtbPreco
             // 
-            this.mtxPreco.Location = new System.Drawing.Point(207, 51);
-            this.mtxPreco.Name = "mtxPreco";
-            this.mtxPreco.Size = new System.Drawing.Size(146, 20);
-            this.mtxPreco.TabIndex = 3;
+            this.mtbPreco.Location = new System.Drawing.Point(207, 51);
+            this.mtbPreco.Name = "mtbPreco";
+            this.mtbPreco.Size = new System.Drawing.Size(146, 20);
+            this.mtbPreco.TabIndex = 3;
             // 
             // lblNomeCompleto
             // 
@@ -86,12 +86,12 @@
             this.lblNomeCompleto.TabIndex = 4;
             this.lblNomeCompleto.Text = "Nome do Produto:";
             // 
-            // txtNomeCompleto
+            // txtNomeProduto
             // 
-            this.txtNomeCompleto.Location = new System.Drawing.Point(52, 108);
-            this.txtNomeCompleto.Name = "txtNomeCompleto";
-            this.txtNomeCompleto.Size = new System.Drawing.Size(301, 20);
-            this.txtNomeCompleto.TabIndex = 5;
+            this.txtNomeProduto.Location = new System.Drawing.Point(52, 108);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(301, 20);
+            this.txtNomeProduto.TabIndex = 5;
             // 
             // lblDescricao
             // 
@@ -102,13 +102,13 @@
             this.lblDescricao.TabIndex = 6;
             this.lblDescricao.Text = "Descrição:";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 163);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 90);
-            this.textBox1.TabIndex = 7;
+            this.txtDescricao.Location = new System.Drawing.Point(52, 163);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(301, 90);
+            this.txtDescricao.TabIndex = 7;
             // 
             // lblTempoPreparo
             // 
@@ -119,13 +119,13 @@
             this.lblTempoPreparo.TabIndex = 8;
             this.lblTempoPreparo.Text = "Tempo de Preparo:";
             // 
-            // mtxTempoPreparo
+            // mtbTempoPreparo
             // 
-            this.mtxTempoPreparo.Location = new System.Drawing.Point(168, 285);
-            this.mtxTempoPreparo.Mask = "00:00";
-            this.mtxTempoPreparo.Name = "mtxTempoPreparo";
-            this.mtxTempoPreparo.Size = new System.Drawing.Size(184, 20);
-            this.mtxTempoPreparo.TabIndex = 9;
+            this.mtbTempoPreparo.Location = new System.Drawing.Point(168, 285);
+            this.mtbTempoPreparo.Mask = "00:00";
+            this.mtbTempoPreparo.Name = "mtbTempoPreparo";
+            this.mtbTempoPreparo.Size = new System.Drawing.Size(184, 20);
+            this.mtbTempoPreparo.TabIndex = 9;
             // 
             // gbxAtivoInativo
             // 
@@ -168,6 +168,7 @@
             this.btnCadastrarProduto.TabIndex = 12;
             this.btnCadastrarProduto.Text = "Cadastrar";
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
             // FormProduto
             // 
@@ -176,14 +177,14 @@
             this.ClientSize = new System.Drawing.Size(412, 424);
             this.Controls.Add(this.btnCadastrarProduto);
             this.Controls.Add(this.gbxAtivoInativo);
-            this.Controls.Add(this.mtxTempoPreparo);
+            this.Controls.Add(this.mtbTempoPreparo);
             this.Controls.Add(this.lblTempoPreparo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtNomeCompleto);
+            this.Controls.Add(this.txtNomeProduto);
             this.Controls.Add(this.lblNomeCompleto);
-            this.Controls.Add(this.mtxPreco);
-            this.Controls.Add(this.mtxIdProduto);
+            this.Controls.Add(this.mtbPreco);
+            this.Controls.Add(this.mtbIdProduto);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.lblIdProduto);
             this.Name = "FormProduto";
@@ -199,14 +200,14 @@
 
         private System.Windows.Forms.Label lblIdProduto;
         private System.Windows.Forms.Label lblPreco;
-        private System.Windows.Forms.MaskedTextBox mtxIdProduto;
-        private System.Windows.Forms.MaskedTextBox mtxPreco;
+        private System.Windows.Forms.MaskedTextBox mtbIdProduto;
+        private System.Windows.Forms.MaskedTextBox mtbPreco;
         private System.Windows.Forms.Label lblNomeCompleto;
-        private System.Windows.Forms.TextBox txtNomeCompleto;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblTempoPreparo;
-        private System.Windows.Forms.MaskedTextBox mtxTempoPreparo;
+        private System.Windows.Forms.MaskedTextBox mtbTempoPreparo;
         private System.Windows.Forms.GroupBox gbxAtivoInativo;
         private System.Windows.Forms.RadioButton rdbInativo;
         private System.Windows.Forms.RadioButton rdbAtivo;

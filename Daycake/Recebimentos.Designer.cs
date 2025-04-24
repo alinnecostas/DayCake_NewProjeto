@@ -95,7 +95,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(397, 32);
+            this.lblStatus.Location = new System.Drawing.Point(397, 31);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(40, 13);
             this.lblStatus.TabIndex = 5;
@@ -132,7 +132,7 @@
             // cbxStatus
             // 
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Location = new System.Drawing.Point(400, 48);
+            this.cbxStatus.Location = new System.Drawing.Point(400, 47);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(157, 21);
             this.cbxStatus.TabIndex = 1;

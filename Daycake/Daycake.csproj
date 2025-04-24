@@ -110,11 +110,11 @@
     <Compile Include="AdicionarPedido.Designer.cs">
       <DependentUpon>AdicionarPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastroCliente.cs">
+    <Compile Include="CadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroCliente.Designer.cs">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <Compile Include="CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaClientes.cs">
       <SubType>Form</SubType>
@@ -160,8 +160,8 @@
     <EmbeddedResource Include="AdicionarPedido.resx">
       <DependentUpon>AdicionarPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastroCliente.resx">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaClientes.resx">
       <DependentUpon>ListaClientes.cs</DependentUpon>

@@ -14,7 +14,7 @@ namespace Daycake
     public partial class FormProduto: Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=1007;database=daycake";
+        private string data_source = "datasource=localhost;username=root;password=;database=daycake";
         public int? id_produto_selecionado = null;
 
         public FormProduto()
@@ -33,6 +33,9 @@ namespace Daycake
                 cmd.Connection = Conexao;
 
                 // Habilitando o Update para o meu botão salvar
+
+                Console.WriteLine("Botão Ativo: " + rdbAtivo.Checked);
+                Console.WriteLine("Botão Inativo: " + rdbInativo.Checked);
 
                 if (id_produto_selecionado == null)
                 {

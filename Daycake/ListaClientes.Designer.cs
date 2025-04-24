@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvwListaClientes = new System.Windows.Forms.ListView();
-            this.txtBarraBuscar = new System.Windows.Forms.TextBox();
+            this.lstListaClientes = new System.Windows.Forms.ListView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lvwListaClientes
+            // lstListaClientes
             // 
-            this.lvwListaClientes.HideSelection = false;
-            this.lvwListaClientes.Location = new System.Drawing.Point(12, 75);
-            this.lvwListaClientes.Name = "lvwListaClientes";
-            this.lvwListaClientes.Size = new System.Drawing.Size(558, 363);
-            this.lvwListaClientes.TabIndex = 0;
-            this.lvwListaClientes.UseCompatibleStateImageBehavior = false;
+            this.lstListaClientes.HideSelection = false;
+            this.lstListaClientes.Location = new System.Drawing.Point(12, 75);
+            this.lstListaClientes.Name = "lstListaClientes";
+            this.lstListaClientes.Size = new System.Drawing.Size(558, 363);
+            this.lstListaClientes.TabIndex = 0;
+            this.lstListaClientes.UseCompatibleStateImageBehavior = false;
             // 
-            // txtBarraBuscar
+            // txtBuscar
             // 
-            this.txtBarraBuscar.Location = new System.Drawing.Point(12, 36);
-            this.txtBarraBuscar.Name = "txtBarraBuscar";
-            this.txtBarraBuscar.Size = new System.Drawing.Size(450, 20);
-            this.txtBarraBuscar.TabIndex = 1;
+            this.txtBuscar.Location = new System.Drawing.Point(12, 36);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(450, 20);
+            this.txtBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -58,6 +58,7 @@
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblBuscar
             // 
@@ -75,8 +76,8 @@
             this.ClientSize = new System.Drawing.Size(582, 450);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBarraBuscar);
-            this.Controls.Add(this.lvwListaClientes);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.lstListaClientes);
             this.Name = "FormListaClientes";
             this.Text = "ListaClientes";
             this.ResumeLayout(false);
@@ -86,8 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lvwListaClientes;
-        private System.Windows.Forms.TextBox txtBarraBuscar;
+        private System.Windows.Forms.ListView lstListaClientes;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblBuscar;
     }

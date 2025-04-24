@@ -38,11 +38,9 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblTempoPreparo = new System.Windows.Forms.Label();
             this.mtbTempoPreparo = new System.Windows.Forms.MaskedTextBox();
-            this.gbxAtivoInativo = new System.Windows.Forms.GroupBox();
-            this.rdbInativo = new System.Windows.Forms.RadioButton();
-            this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
-            this.gbxAtivoInativo.SuspendLayout();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblIdProduto
@@ -127,39 +125,6 @@
             this.mtbTempoPreparo.Size = new System.Drawing.Size(184, 20);
             this.mtbTempoPreparo.TabIndex = 9;
             // 
-            // gbxAtivoInativo
-            // 
-            this.gbxAtivoInativo.Controls.Add(this.rdbInativo);
-            this.gbxAtivoInativo.Controls.Add(this.rdbAtivo);
-            this.gbxAtivoInativo.Location = new System.Drawing.Point(52, 269);
-            this.gbxAtivoInativo.Name = "gbxAtivoInativo";
-            this.gbxAtivoInativo.Size = new System.Drawing.Size(95, 78);
-            this.gbxAtivoInativo.TabIndex = 11;
-            this.gbxAtivoInativo.TabStop = false;
-            this.gbxAtivoInativo.Text = "Ativo / Inativo";
-            // 
-            // rdbInativo
-            // 
-            this.rdbInativo.AutoSize = true;
-            this.rdbInativo.Location = new System.Drawing.Point(18, 46);
-            this.rdbInativo.Name = "rdbInativo";
-            this.rdbInativo.Size = new System.Drawing.Size(57, 17);
-            this.rdbInativo.TabIndex = 1;
-            this.rdbInativo.TabStop = true;
-            this.rdbInativo.Text = "Inativo";
-            this.rdbInativo.UseVisualStyleBackColor = true;
-            // 
-            // rdbAtivo
-            // 
-            this.rdbAtivo.AutoSize = true;
-            this.rdbAtivo.Location = new System.Drawing.Point(18, 23);
-            this.rdbAtivo.Name = "rdbAtivo";
-            this.rdbAtivo.Size = new System.Drawing.Size(49, 17);
-            this.rdbAtivo.TabIndex = 0;
-            this.rdbAtivo.TabStop = true;
-            this.rdbAtivo.Text = "Ativo";
-            this.rdbAtivo.UseVisualStyleBackColor = true;
-            // 
             // btnCadastrarProduto
             // 
             this.btnCadastrarProduto.Location = new System.Drawing.Point(252, 361);
@@ -170,13 +135,31 @@
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
             this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
+            // cbxStatus
+            // 
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Location = new System.Drawing.Point(52, 284);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(110, 21);
+            this.cbxStatus.TabIndex = 13;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(49, 268);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(40, 13);
+            this.lblStatus.TabIndex = 14;
+            this.lblStatus.Text = "Status:";
+            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 424);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.btnCadastrarProduto);
-            this.Controls.Add(this.gbxAtivoInativo);
             this.Controls.Add(this.mtbTempoPreparo);
             this.Controls.Add(this.lblTempoPreparo);
             this.Controls.Add(this.txtDescricao);
@@ -189,8 +172,6 @@
             this.Controls.Add(this.lblIdProduto);
             this.Name = "FormProduto";
             this.Text = "AdicionarProduto";
-            this.gbxAtivoInativo.ResumeLayout(false);
-            this.gbxAtivoInativo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,9 +189,8 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblTempoPreparo;
         private System.Windows.Forms.MaskedTextBox mtbTempoPreparo;
-        private System.Windows.Forms.GroupBox gbxAtivoInativo;
-        private System.Windows.Forms.RadioButton rdbInativo;
-        private System.Windows.Forms.RadioButton rdbAtivo;
         private System.Windows.Forms.Button btnCadastrarProduto;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

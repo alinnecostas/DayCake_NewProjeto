@@ -14,7 +14,7 @@ namespace Daycake
     public partial class FormProduto: Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=;database=daycake";
+        private string data_source = "datasource=localhost;username=root;password=1007;database=daycake";
         public int? id_produto_selecionado = null;
 
         public FormProduto()
@@ -34,24 +34,22 @@ namespace Daycake
 
                 // Habilitando o Update para o meu botão salvar
 
-                Console.WriteLine("Botão Ativo: " + rdbAtivo.Checked);
-                Console.WriteLine("Botão Inativo: " + rdbInativo.Checked);
-
                 if (id_produto_selecionado == null)
                 {
                     // insert
                     cmd.Parameters.Clear(); // limpa os parâmetros antigos
                     cmd.CommandText =
                         "INSERT INTO produto " +
-                        "(idProduto, nomeProduto, descricao, preco, tempo_preparo, ativo) " +
+                        "(idProduto, nomeProduto, descricao, preco, tempo_preparo, status) " +
                         "VALUES " +
-                        "(@idProduto, @nomeProduto, @descricao, @preco, @tempo_preparo, @ativo)";
+                        "(@idProduto, @nomeProduto, @descricao, @preco, @tempo_preparo, @status)";
 
                     cmd.Parameters.AddWithValue("@idProduto", mtbIdProduto.Text);
                     cmd.Parameters.AddWithValue("@nomeProduto", txtNomeProduto.Text);
                     cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
                     cmd.Parameters.AddWithValue("@preco", mtbPreco.Text);
                     cmd.Parameters.AddWithValue("@tempo_preparo", mtbTempoPreparo.Text);
+                    cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Produto Inserido com Sucesso", "Sucesso",
@@ -64,7 +62,7 @@ namespace Daycake
                     cmd.Parameters.Clear(); // limpa os parâmetros antigos
                     cmd.CommandText =
                         "UPDATE produto " +
-                        "SET idProduto = @idProduto, nomeProduto = @nomeProduto, descricao = @descricao, preco = @preco, tempo_preparo = @tempo_preparo, ativo = @ativo " +
+                        "SET idProduto = @idProduto, nomeProduto = @nomeProduto, descricao = @descricao, preco = @preco, tempo_preparo = @tempo_preparo, status = @status " +
                         "WHERE idProduto = @idProduto";
 
                     cmd.Parameters.AddWithValue("@idProduto", mtbIdProduto.Text);
@@ -72,6 +70,7 @@ namespace Daycake
                     cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
                     cmd.Parameters.AddWithValue("@preco", mtbPreco.Text);
                     cmd.Parameters.AddWithValue("@tempo_preparo", mtbTempoPreparo.Text);
+                    cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Produto Atualizado com Sucesso", "Sucesso",

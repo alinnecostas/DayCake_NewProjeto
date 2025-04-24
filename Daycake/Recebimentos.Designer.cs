@@ -47,7 +47,7 @@
             this.lstRecebimentos.HideSelection = false;
             this.lstRecebimentos.Location = new System.Drawing.Point(13, 142);
             this.lstRecebimentos.Name = "lstRecebimentos";
-            this.lstRecebimentos.Size = new System.Drawing.Size(571, 422);
+            this.lstRecebimentos.Size = new System.Drawing.Size(571, 330);
             this.lstRecebimentos.TabIndex = 0;
             this.lstRecebimentos.UseCompatibleStateImageBehavior = false;
             // 
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 576);
+            this.ClientSize = new System.Drawing.Size(599, 484);
             this.Controls.Add(this.gbxFiltro);
             this.Controls.Add(this.lstRecebimentos);
             this.Name = "Recebimentos";

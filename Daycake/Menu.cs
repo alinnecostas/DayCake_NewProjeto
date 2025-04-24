@@ -14,12 +14,6 @@ namespace Daycake
 {
     public partial class FormMenu: Form
     {
-        //Conexão com o banco de dados
-        MySqlConnection Conexao;
-        //Conexão com o banco de dados
-        private string data_source = "datasource=localhost;username=root;password=1007;database=daycake";
-        
-        
         public FormMenu()
         {
             InitializeComponent();

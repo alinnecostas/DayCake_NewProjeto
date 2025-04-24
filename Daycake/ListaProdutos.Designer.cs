@@ -31,7 +31,7 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBarraBuscar = new System.Windows.Forms.TextBox();
-            this.lvwListaProdutos = new System.Windows.Forms.ListView();
+            this.lstListaProdutos = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblBuscar
@@ -51,6 +51,7 @@
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBarraBuscar
             // 
@@ -59,14 +60,14 @@
             this.txtBarraBuscar.Size = new System.Drawing.Size(450, 20);
             this.txtBarraBuscar.TabIndex = 9;
             // 
-            // lvwListaProdutos
+            // lstListaProdutos
             // 
-            this.lvwListaProdutos.HideSelection = false;
-            this.lvwListaProdutos.Location = new System.Drawing.Point(12, 75);
-            this.lvwListaProdutos.Name = "lvwListaProdutos";
-            this.lvwListaProdutos.Size = new System.Drawing.Size(558, 363);
-            this.lvwListaProdutos.TabIndex = 8;
-            this.lvwListaProdutos.UseCompatibleStateImageBehavior = false;
+            this.lstListaProdutos.HideSelection = false;
+            this.lstListaProdutos.Location = new System.Drawing.Point(12, 75);
+            this.lstListaProdutos.Name = "lstListaProdutos";
+            this.lstListaProdutos.Size = new System.Drawing.Size(558, 363);
+            this.lstListaProdutos.TabIndex = 8;
+            this.lstListaProdutos.UseCompatibleStateImageBehavior = false;
             // 
             // FormListaProdutos
             // 
@@ -76,7 +77,7 @@
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBarraBuscar);
-            this.Controls.Add(this.lvwListaProdutos);
+            this.Controls.Add(this.lstListaProdutos);
             this.Name = "FormListaProdutos";
             this.Text = "ListaProdutos";
             this.ResumeLayout(false);
@@ -89,6 +90,6 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBarraBuscar;
-        private System.Windows.Forms.ListView lvwListaProdutos;
+        private System.Windows.Forms.ListView lstListaProdutos;
     }
 }

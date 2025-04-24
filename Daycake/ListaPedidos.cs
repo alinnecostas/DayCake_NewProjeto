@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,65 @@ namespace Daycake
 {
     public partial class FormListaPedidos : Form
     {
+        MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=1007;database=Daycake";
+
         public FormListaPedidos()
         {
             InitializeComponent();
+
+            lstListaPedidos.View = View.Details;
+            lstListaPedidos.Columns.Clear();
+            lstListaPedidos.Items.Clear();
+
+            lstListaPedidos.Columns.Add("ID Pedido", 50);
+            lstListaPedidos.Columns.Add("ID Cliente", 50);
+            lstListaPedidos.Columns.Add("Data do Pedido", 100);
+            lstListaPedidos.Columns.Add("Data da Entrega", 100);
+            lstListaPedidos.Columns.Add("Tipo do Produto", 100);
+            lstListaPedidos.Columns.Add("Valor", 30);
+            lstListaPedidos.Columns.Add("Observação", 80);
+            lstListaPedidos.Columns.Add("Forma de Pagamento", 50);
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try 
+            { 
+            Conexao.Open();
+
+            string sql = "SELECT * FROM Pedido";
+
+            MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string[] row =
+                {
+                        reader.GetInt32(0).ToString(), //id pedido
+                        reader.GetInt32(1).ToString(), // id cliente
+                        reader.GetString(2), // data pedido
+                        reader.GetString(3), // data entrega
+                        reader.GetString(4), // tipo produto
+                        reader.GetString(5), // valor
+                        reader.GetString(6), // observação
+                        reader.GetString(7), // forma pagamento
+                       };
+                var linha_list_view = new ListViewItem(row);
+                lstListaPedidos.Items.Add(linha_list_view);
+            }
+
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
         }
     }
 }

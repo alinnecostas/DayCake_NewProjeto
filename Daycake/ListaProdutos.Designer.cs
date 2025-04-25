@@ -32,6 +32,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBarraBuscar = new System.Windows.Forms.TextBox();
             this.lstListaProdutos = new System.Windows.Forms.ListView();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblBuscar
@@ -65,15 +66,25 @@
             this.lstListaProdutos.HideSelection = false;
             this.lstListaProdutos.Location = new System.Drawing.Point(12, 75);
             this.lstListaProdutos.Name = "lstListaProdutos";
-            this.lstListaProdutos.Size = new System.Drawing.Size(558, 363);
+            this.lstListaProdutos.Size = new System.Drawing.Size(558, 335);
             this.lstListaProdutos.TabIndex = 8;
             this.lstListaProdutos.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(476, 416);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(94, 26);
+            this.btnExcluir.TabIndex = 12;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // FormListaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 450);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBarraBuscar);
@@ -91,5 +102,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBarraBuscar;
         private System.Windows.Forms.ListView lstListaProdutos;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

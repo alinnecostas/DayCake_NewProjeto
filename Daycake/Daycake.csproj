@@ -184,12 +184,6 @@
     <Compile Include="Recebimentos.Designer.cs">
       <DependentUpon>Recebimentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="teste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="teste.Designer.cs">
-      <DependentUpon>teste.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdicionarProduto%28Layout%29.resx">
       <DependentUpon>AdicionarProduto%28Layout%29.cs</DependentUpon>
     </EmbeddedResource>

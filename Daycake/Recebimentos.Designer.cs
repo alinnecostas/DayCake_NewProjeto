@@ -39,6 +39,7 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.dtpDatapedido = new System.Windows.Forms.DateTimePicker();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.gbxFiltro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             this.lstRecebimentos.HideSelection = false;
             this.lstRecebimentos.Location = new System.Drawing.Point(13, 142);
             this.lstRecebimentos.Name = "lstRecebimentos";
-            this.lstRecebimentos.Size = new System.Drawing.Size(571, 330);
+            this.lstRecebimentos.Size = new System.Drawing.Size(571, 297);
             this.lstRecebimentos.TabIndex = 0;
             this.lstRecebimentos.UseCompatibleStateImageBehavior = false;
             // 
@@ -144,11 +145,21 @@
             this.dtpDatapedido.Size = new System.Drawing.Size(165, 20);
             this.dtpDatapedido.TabIndex = 0;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(490, 446);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(94, 26);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
             // Recebimentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 484);
+            this.ClientSize = new System.Drawing.Size(599, 479);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.gbxFiltro);
             this.Controls.Add(this.lstRecebimentos);
             this.Name = "Recebimentos";
@@ -172,5 +183,6 @@
         private System.Windows.Forms.MaskedTextBox mtbIdpedido;
         private System.Windows.Forms.MaskedTextBox mtbIdcliente;
         private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

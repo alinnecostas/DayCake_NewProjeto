@@ -38,7 +38,6 @@
             this.tlpLoginSenha = new System.Windows.Forms.TableLayoutPanel();
             this.tlpLogo = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButtonAcessar = new System.Windows.Forms.TableLayoutPanel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.picSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -53,6 +52,7 @@
             this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtLogin.Location = new System.Drawing.Point(27, 3);
             this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLogin.Multiline = true;
@@ -66,6 +66,7 @@
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtSenha.Location = new System.Drawing.Point(27, 31);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSenha.Multiline = true;
@@ -78,6 +79,8 @@
             // 
             this.picSenha.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.picSenha.BackColor = System.Drawing.Color.Transparent;
+            this.picSenha.BackgroundImage = global::Daycake.Properties.Resources.senha_de_usuario;
+            this.picSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picSenha.Location = new System.Drawing.Point(4, 31);
             this.picSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picSenha.Name = "picSenha";
@@ -90,11 +93,15 @@
             // 
             this.picLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.picLogin.BackColor = System.Drawing.Color.Transparent;
+            this.picLogin.BackgroundImage = global::Daycake.Properties.Resources.login_de_usuario;
+            this.picLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogin.ErrorImage = global::Daycake.Properties.Resources.login_de_usuario;
             this.picLogin.Location = new System.Drawing.Point(4, 3);
             this.picLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picLogin.Name = "picLogin";
-            this.picLogin.Size = new System.Drawing.Size(15, 21);
-            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogin.Size = new System.Drawing.Size(15, 22);
+            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picLogin.TabIndex = 6;
             this.picLogin.TabStop = false;
             // 
@@ -107,7 +114,7 @@
             this.btnAcessar.FlatAppearance.BorderSize = 0;
             this.btnAcessar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcessar.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcessar.ForeColor = System.Drawing.Color.White;
+            this.btnAcessar.ForeColor = System.Drawing.Color.Black;
             this.btnAcessar.Location = new System.Drawing.Point(3, 3);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -212,7 +219,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpLoginSenha;
         private System.Windows.Forms.TableLayoutPanel tlpLogo;
         private System.Windows.Forms.TableLayoutPanel tlpButtonAcessar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

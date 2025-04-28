@@ -104,35 +104,11 @@
     <Compile Include="AdicionarProduto%28Layout%29.Designer.cs">
       <DependentUpon>AdicionarProduto%28Layout%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdicionarProduto.cs">
+    <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarProduto.Designer.cs">
-      <DependentUpon>AdicionarProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdicionarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdicionarPedido.Designer.cs">
-      <DependentUpon>AdicionarPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastrarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastrarCliente.Designer.cs">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroCliente%28Layout%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CadastroCliente%28Layout%29.Designer.cs">
-      <DependentUpon>CadastroCliente%28Layout%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaClientes.Designer.cs">
-      <DependentUpon>ListaClientes.cs</DependentUpon>
+    <Compile Include="CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaPedidos.cs">
       <SubType>Form</SubType>
@@ -152,23 +128,11 @@
     <Compile Include="Login%28Layout%29.Designer.cs">
       <DependentUpon>Login%28Layout%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu%28Layout%29.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu%28Layout%29.Designer.cs">
       <DependentUpon>Menu%28Layout%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedidos%28Layout%29.cs">
       <SubType>Form</SubType>
@@ -187,20 +151,8 @@
     <EmbeddedResource Include="AdicionarProduto%28Layout%29.resx">
       <DependentUpon>AdicionarProduto%28Layout%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarProduto.resx">
-      <DependentUpon>AdicionarProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarPedido.resx">
-      <DependentUpon>AdicionarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastrarCliente.resx">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CadastroCliente%28Layout%29.resx">
-      <DependentUpon>CadastroCliente%28Layout%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaClientes.resx">
-      <DependentUpon>ListaClientes.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPedidos.resx">
       <DependentUpon>ListaPedidos.cs</DependentUpon>
@@ -211,14 +163,8 @@
     <EmbeddedResource Include="Login%28Layout%29.resx">
       <DependentUpon>Login%28Layout%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu%28Layout%29.resx">
       <DependentUpon>Menu%28Layout%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pedidos%28Layout%29.resx">
       <DependentUpon>Pedidos%28Layout%29.cs</DependentUpon>
@@ -252,6 +198,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Daycake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-de-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senha-de-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoDegrade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo login %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

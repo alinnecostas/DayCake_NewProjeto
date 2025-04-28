@@ -14,7 +14,7 @@ namespace Daycake
     public partial class FormListaProdutos : Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=1007;database=Daycake";
+        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=Daycake";
 
         public FormListaProdutos()
         {
@@ -36,6 +36,7 @@ namespace Daycake
         {
             try
             {
+                Conexao = new MySqlConnection(data_source);
                 Conexao.Open();
 
                 string sql = "SELECT * FROM Produto";
@@ -47,17 +48,16 @@ namespace Daycake
                 {
                     string[] row =
                     {
-                        reader.GetInt32(0).ToString(), //id produto
-                        reader.GetString(1), // nome produto
-                        reader.GetString(2), // descrição
-                        reader.GetDecimal(3).ToString(), // preço
-                        reader.GetString(4), // tempo preparo
-                        reader.GetString(5), // status
-                       };
+                reader.GetInt32(0).ToString(), //id produto
+                reader.GetString(1), // nome produto
+                reader.GetString(2), // descrição
+                reader.GetDecimal(3).ToString(), // preço
+                reader.GetString(4), // tempo preparo
+                reader.GetString(5), // status
+            };
                     var linha_list_view = new ListViewItem(row);
                     lstListaProdutos.Items.Add(linha_list_view);
                 }
-
             }
             catch (Exception ex)
             {
@@ -65,8 +65,10 @@ namespace Daycake
             }
             finally
             {
-                Conexao.Close();
+                if (Conexao != null)
+                    Conexao.Close();
             }
         }
+
     }
 }

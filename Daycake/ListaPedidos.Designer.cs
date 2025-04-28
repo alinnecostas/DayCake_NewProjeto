@@ -38,17 +38,19 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(12, 20);
+            this.lblBuscar.Location = new System.Drawing.Point(16, 25);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(98, 13);
+            this.lblBuscar.Size = new System.Drawing.Size(121, 16);
             this.lblBuscar.TabIndex = 7;
             this.lblBuscar.Text = "Digite a sua busca:";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(474, 35);
+            this.btnBuscar.Location = new System.Drawing.Point(632, 43);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(125, 28);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -56,39 +58,43 @@
             // 
             // txtBarraBuscar
             // 
-            this.txtBarraBuscar.Location = new System.Drawing.Point(12, 36);
+            this.txtBarraBuscar.Location = new System.Drawing.Point(19, 43);
+            this.txtBarraBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBarraBuscar.Name = "txtBarraBuscar";
-            this.txtBarraBuscar.Size = new System.Drawing.Size(450, 20);
+            this.txtBarraBuscar.Size = new System.Drawing.Size(599, 22);
             this.txtBarraBuscar.TabIndex = 5;
             // 
             // lstListaPedidos
             // 
             this.lstListaPedidos.HideSelection = false;
-            this.lstListaPedidos.Location = new System.Drawing.Point(12, 75);
+            this.lstListaPedidos.Location = new System.Drawing.Point(16, 92);
+            this.lstListaPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstListaPedidos.Name = "lstListaPedidos";
-            this.lstListaPedidos.Size = new System.Drawing.Size(558, 319);
+            this.lstListaPedidos.Size = new System.Drawing.Size(743, 392);
             this.lstListaPedidos.TabIndex = 4;
             this.lstListaPedidos.UseCompatibleStateImageBehavior = false;
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(476, 400);
+            this.btnExcluir.Location = new System.Drawing.Point(635, 492);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(94, 26);
+            this.btnExcluir.Size = new System.Drawing.Size(125, 32);
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // FormListaPedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 434);
+            this.ClientSize = new System.Drawing.Size(773, 534);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBarraBuscar);
             this.Controls.Add(this.lstListaPedidos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormListaPedidos";
             this.Text = "ListaPedidos";
             this.ResumeLayout(false);

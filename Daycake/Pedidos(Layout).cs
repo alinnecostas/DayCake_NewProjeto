@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class Pedido : Form
+    public partial class FormPedido : Form
     {
         // No construtor de Pedidos.cs  
-        public Pedido()
+        public FormPedido()
         {
             InitializeComponent();
 
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Form Menu = new Menu();
-            this.Close();
         }
     }
 }

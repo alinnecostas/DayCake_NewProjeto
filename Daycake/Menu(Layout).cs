@@ -2,67 +2,89 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Daycake
 {
-    public partial class Menu: Form
+    public partial class FormMenu : Form
     {
-        public Menu()
+        public FormMenu()
         {
             InitializeComponent();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void mnsSair_Click(object sender, EventArgs e)
         {
-            // Aplica no MenuStrip
-            mnsMenu.BackColor = ColorTranslator.FromHtml("255; 235; 223"); // Rosa bebê
-            mnsMenu.ForeColor = ColorTranslator.FromHtml("141; 98; 98");
-
-            // Para cada item (Cliente, Pedidos, etc)
-            foreach (ToolStripMenuItem item in mnsMenu.Items)
-            {
-                item.BackColor = ColorTranslator.FromHtml("255; 235; 223"); // Fundo
-                item.ForeColor = ColorTranslator.FromHtml("141; 98; 98"); // Texto
-
-                // Também aplica nos submenus, se tiver
-                foreach (ToolStripItem subItem in item.DropDownItems)
-                {
-                    subItem.BackColor = ColorTranslator.FromHtml("141; 98; 98");
-                    subItem.ForeColor = ColorTranslator.FromHtml("255; 235; 223");
-                }
-            }
-
-        }
-
-        private void mnsAdicionarProduto_Click(object sender, EventArgs e)
-        {
-            Form adicionarProduto = new AdicionarProduto();
-            adicionarProduto.Show();
-        }
-
-        private void mnsAgendarPedido_Click(object sender, EventArgs e)
-        {
-            Form Pedidos = new Pedido();
-            Pedidos.Show();
+            this.Close();
         }
 
         private void mnsCadastro_Click(object sender, EventArgs e)
         {
-            Form CadastroCliente = new CadastroCliente();
-            CadastroCliente.Show();
+            CadastroConsultaClientes form = new CadastroConsultaClientes();
+            form.ShowDialog();
         }
 
-        private void mnsSair_Click(object sender, EventArgs e)
+        private void mnsAgendarPedido_Click(object sender, EventArgs e)
         {
-            // Fecha o programa
-            Application.Exit();
+            FormPedido form = new FormPedido();
+            form.ShowDialog();
+        }
 
+        private void mnsAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            AdicionarProduto form = new AdicionarProduto();
+            form.ShowDialog();
+        }
 
+        private void mnsClientes_Click(object sender, EventArgs e)
+        {
+            CadastroConsultaClientes form = new CadastroConsultaClientes();
+            form.ShowDialog();
+        }
+
+        private void mnsListaProdutos_Click(object sender, EventArgs e)
+        {
+            FormListaProdutos form = new FormListaProdutos();
+            form.ShowDialog();
+        }
+
+        private void mnsRecebimentos_Click(object sender, EventArgs e)
+        {
+            Recebimentos form = new Recebimentos();
+            form.ShowDialog();
+        }
+
+        private void picMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnsConsultarPedidos_Click_1(object sender, EventArgs e)
+        {
+            FormListaPedidos form = new FormListaPedidos();
+            form.ShowDialog();
+        }
+
+        private void mnsListaProdutos_Click_1(object sender, EventArgs e)
+        {
+            Form form = new FormListaProdutos();
+            form.ShowDialog();
+        }
+
+        private void mnsClientes_Click_1(object sender, EventArgs e)
+        {
+         
         }
     }
 }

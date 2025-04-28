@@ -8,13 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Daycake
 {
     public partial class FormListaPedidos : Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=1007;database=Daycake";
+
+        private string data_source = "server=localhost;port=3306;user=root;password=1007;database=daycake";
+
+        public int ? id_pedido_selecionado = null;
 
         public FormListaPedidos()
         {
@@ -32,6 +36,8 @@ namespace Daycake
             lstListaPedidos.Columns.Add("Valor", 30);
             lstListaPedidos.Columns.Add("Observação", 80);
             lstListaPedidos.Columns.Add("Forma de Pagamento", 50);
+
+           
 
         }
 

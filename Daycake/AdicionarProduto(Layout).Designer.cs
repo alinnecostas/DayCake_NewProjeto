@@ -30,34 +30,37 @@
         {
             this.tblPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdicionarProduto = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tblPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.tblPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtNomeCompleto = new System.Windows.Forms.TextBox();
-            this.lblNomeCompleto = new System.Windows.Forms.Label();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.lblNomeProduto = new System.Windows.Forms.Label();
             this.tblPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.mtxPreco = new System.Windows.Forms.MaskedTextBox();
-            this.mtxIdProduto = new System.Windows.Forms.MaskedTextBox();
+            this.mtbIdProduto = new System.Windows.Forms.MaskedTextBox();
+            this.mtbPreco = new System.Windows.Forms.MaskedTextBox();
             this.lblIdProduto = new System.Windows.Forms.Label();
             this.lblPreco = new System.Windows.Forms.Label();
             this.tblPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.gbxAtivoInativo = new System.Windows.Forms.GroupBox();
-            this.rdbInativo = new System.Windows.Forms.RadioButton();
-            this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.mtxTempoPreparo = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTempoPreparo = new System.Windows.Forms.MaskedTextBox();
             this.lblTempoPreparo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblAtivoInativo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbxAtivo = new System.Windows.Forms.CheckBox();
+            this.cbxInativo = new System.Windows.Forms.CheckBox();
             this.tblPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblPanel3.SuspendLayout();
             this.tblPanel2.SuspendLayout();
             this.tblPanel1.SuspendLayout();
             this.tblPanel4.SuspendLayout();
-            this.gbxAtivoInativo.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblPanel5
@@ -96,7 +99,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 323F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAdicionarProduto, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVoltar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 368);
@@ -106,20 +109,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(712, 36);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // button1
+            // btnAdicionarProduto
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
-            this.button1.Location = new System.Drawing.Point(565, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 28);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Cadastrar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdicionarProduto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAdicionarProduto.AutoSize = true;
+            this.btnAdicionarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
+            this.btnAdicionarProduto.Location = new System.Drawing.Point(553, 4);
+            this.btnAdicionarProduto.Name = "btnAdicionarProduto";
+            this.btnAdicionarProduto.Size = new System.Drawing.Size(116, 28);
+            this.btnAdicionarProduto.TabIndex = 39;
+            this.btnAdicionarProduto.Text = "Adicionar Produto";
+            this.btnAdicionarProduto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdicionarProduto.UseVisualStyleBackColor = false;
+            this.btnAdicionarProduto.Click += new System.EventHandler(this.btnAdicionarProduto_Click);
             // 
             // btnVoltar
             // 
@@ -134,7 +138,6 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // tblPanel3
             // 
@@ -143,7 +146,7 @@
             this.tblPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel3.Controls.Add(this.textBox3, 1, 1);
+            this.tblPanel3.Controls.Add(this.txtDescricao, 1, 1);
             this.tblPanel3.Controls.Add(this.lblDescricao, 1, 0);
             this.tblPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel3.Location = new System.Drawing.Point(3, 160);
@@ -154,14 +157,15 @@
             this.tblPanel3.Size = new System.Drawing.Size(712, 111);
             this.tblPanel3.TabIndex = 2;
             // 
-            // textBox3
+            // txtDescricao
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(43, 18);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(626, 90);
-            this.textBox3.TabIndex = 34;
+            this.txtDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.txtDescricao.Location = new System.Drawing.Point(43, 18);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(626, 90);
+            this.txtDescricao.TabIndex = 34;
             // 
             // lblDescricao
             // 
@@ -180,8 +184,8 @@
             this.tblPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel2.Controls.Add(this.txtNomeCompleto, 1, 1);
-            this.tblPanel2.Controls.Add(this.lblNomeCompleto, 1, 0);
+            this.tblPanel2.Controls.Add(this.txtNomeProduto, 1, 1);
+            this.tblPanel2.Controls.Add(this.lblNomeProduto, 1, 0);
             this.tblPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel2.Location = new System.Drawing.Point(3, 91);
             this.tblPanel2.Name = "tblPanel2";
@@ -191,23 +195,24 @@
             this.tblPanel2.Size = new System.Drawing.Size(712, 63);
             this.tblPanel2.TabIndex = 1;
             // 
-            // txtNomeCompleto
+            // txtNomeProduto
             // 
-            this.txtNomeCompleto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNomeCompleto.Location = new System.Drawing.Point(43, 28);
-            this.txtNomeCompleto.Name = "txtNomeCompleto";
-            this.txtNomeCompleto.Size = new System.Drawing.Size(626, 23);
-            this.txtNomeCompleto.TabIndex = 35;
+            this.txtNomeProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNomeProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.txtNomeProduto.Location = new System.Drawing.Point(43, 28);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(626, 23);
+            this.txtNomeProduto.TabIndex = 35;
             // 
-            // lblNomeCompleto
+            // lblNomeProduto
             // 
-            this.lblNomeCompleto.AutoSize = true;
-            this.lblNomeCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblNomeCompleto.Location = new System.Drawing.Point(43, 0);
-            this.lblNomeCompleto.Name = "lblNomeCompleto";
-            this.lblNomeCompleto.Size = new System.Drawing.Size(99, 15);
-            this.lblNomeCompleto.TabIndex = 34;
-            this.lblNomeCompleto.Text = "Nome Completo:";
+            this.lblNomeProduto.AutoSize = true;
+            this.lblNomeProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblNomeProduto.Location = new System.Drawing.Point(43, 0);
+            this.lblNomeProduto.Name = "lblNomeProduto";
+            this.lblNomeProduto.Size = new System.Drawing.Size(89, 15);
+            this.lblNomeProduto.TabIndex = 34;
+            this.lblNomeProduto.Text = "Nome Produto:";
             // 
             // tblPanel1
             // 
@@ -218,8 +223,8 @@
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel1.Controls.Add(this.mtxPreco, 1, 1);
-            this.tblPanel1.Controls.Add(this.mtxIdProduto, 3, 1);
+            this.tblPanel1.Controls.Add(this.mtbIdProduto, 1, 1);
+            this.tblPanel1.Controls.Add(this.mtbPreco, 3, 1);
             this.tblPanel1.Controls.Add(this.lblIdProduto, 1, 0);
             this.tblPanel1.Controls.Add(this.lblPreco, 3, 0);
             this.tblPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -231,21 +236,23 @@
             this.tblPanel1.Size = new System.Drawing.Size(712, 62);
             this.tblPanel1.TabIndex = 0;
             // 
-            // mtxPreco
+            // mtbIdProduto
             // 
-            this.mtxPreco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxPreco.Location = new System.Drawing.Point(43, 27);
-            this.mtxPreco.Name = "mtxPreco";
-            this.mtxPreco.Size = new System.Drawing.Size(300, 23);
-            this.mtxPreco.TabIndex = 33;
+            this.mtbIdProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtbIdProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.mtbIdProduto.Location = new System.Drawing.Point(43, 27);
+            this.mtbIdProduto.Name = "mtbIdProduto";
+            this.mtbIdProduto.Size = new System.Drawing.Size(300, 23);
+            this.mtbIdProduto.TabIndex = 33;
             // 
-            // mtxIdProduto
+            // mtbPreco
             // 
-            this.mtxIdProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxIdProduto.Location = new System.Drawing.Point(369, 27);
-            this.mtxIdProduto.Name = "mtxIdProduto";
-            this.mtxIdProduto.Size = new System.Drawing.Size(300, 23);
-            this.mtxIdProduto.TabIndex = 32;
+            this.mtbPreco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtbPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.mtbPreco.Location = new System.Drawing.Point(369, 27);
+            this.mtbPreco.Name = "mtbPreco";
+            this.mtbPreco.Size = new System.Drawing.Size(300, 23);
+            this.mtbPreco.TabIndex = 32;
             // 
             // lblIdProduto
             // 
@@ -275,8 +282,8 @@
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 323F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel4.Controls.Add(this.gbxAtivoInativo, 1, 0);
             this.tblPanel4.Controls.Add(this.tableLayoutPanel5, 3, 0);
+            this.tblPanel4.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tblPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel4.Location = new System.Drawing.Point(3, 287);
             this.tblPanel4.Name = "tblPanel4";
@@ -285,46 +292,11 @@
             this.tblPanel4.Size = new System.Drawing.Size(712, 75);
             this.tblPanel4.TabIndex = 3;
             // 
-            // gbxAtivoInativo
-            // 
-            this.gbxAtivoInativo.Controls.Add(this.rdbInativo);
-            this.gbxAtivoInativo.Controls.Add(this.rdbAtivo);
-            this.gbxAtivoInativo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbxAtivoInativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.gbxAtivoInativo.Location = new System.Drawing.Point(43, 3);
-            this.gbxAtivoInativo.Name = "gbxAtivoInativo";
-            this.gbxAtivoInativo.Size = new System.Drawing.Size(283, 69);
-            this.gbxAtivoInativo.TabIndex = 37;
-            this.gbxAtivoInativo.TabStop = false;
-            this.gbxAtivoInativo.Text = "Ativo / Inativo";
-            // 
-            // rdbInativo
-            // 
-            this.rdbInativo.AutoSize = true;
-            this.rdbInativo.Location = new System.Drawing.Point(100, 23);
-            this.rdbInativo.Name = "rdbInativo";
-            this.rdbInativo.Size = new System.Drawing.Size(61, 19);
-            this.rdbInativo.TabIndex = 1;
-            this.rdbInativo.TabStop = true;
-            this.rdbInativo.Text = "Inativo";
-            this.rdbInativo.UseVisualStyleBackColor = true;
-            // 
-            // rdbAtivo
-            // 
-            this.rdbAtivo.AutoSize = true;
-            this.rdbAtivo.Location = new System.Drawing.Point(18, 23);
-            this.rdbAtivo.Name = "rdbAtivo";
-            this.rdbAtivo.Size = new System.Drawing.Size(53, 19);
-            this.rdbAtivo.TabIndex = 0;
-            this.rdbAtivo.TabStop = true;
-            this.rdbAtivo.Text = "Ativo";
-            this.rdbAtivo.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.mtxTempoPreparo, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.mtbTempoPreparo, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.lblTempoPreparo, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(352, 3);
@@ -335,15 +307,16 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(317, 69);
             this.tableLayoutPanel5.TabIndex = 38;
             // 
-            // mtxTempoPreparo
+            // mtbTempoPreparo
             // 
-            this.mtxTempoPreparo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtxTempoPreparo.Location = new System.Drawing.Point(3, 30);
-            this.mtxTempoPreparo.Mask = "00:00";
-            this.mtxTempoPreparo.Name = "mtxTempoPreparo";
-            this.mtxTempoPreparo.Size = new System.Drawing.Size(311, 23);
-            this.mtxTempoPreparo.TabIndex = 36;
-            this.mtxTempoPreparo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbTempoPreparo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtbTempoPreparo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.mtbTempoPreparo.Location = new System.Drawing.Point(3, 30);
+            this.mtbTempoPreparo.Mask = "00:00";
+            this.mtbTempoPreparo.Name = "mtbTempoPreparo";
+            this.mtbTempoPreparo.Size = new System.Drawing.Size(311, 23);
+            this.mtbTempoPreparo.TabIndex = 36;
+            this.mtbTempoPreparo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTempoPreparo
             // 
@@ -351,9 +324,73 @@
             this.lblTempoPreparo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lblTempoPreparo.Location = new System.Drawing.Point(3, 0);
             this.lblTempoPreparo.Name = "lblTempoPreparo";
-            this.lblTempoPreparo.Size = new System.Drawing.Size(106, 15);
+            this.lblTempoPreparo.Size = new System.Drawing.Size(107, 15);
             this.lblTempoPreparo.TabIndex = 35;
             this.lblTempoPreparo.Text = "Tempo de Preparo:";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lblAtivoInativo, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(284, 69);
+            this.tableLayoutPanel2.TabIndex = 39;
+            // 
+            // lblAtivoInativo
+            // 
+            this.lblAtivoInativo.AutoSize = true;
+            this.lblAtivoInativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblAtivoInativo.Location = new System.Drawing.Point(3, 0);
+            this.lblAtivoInativo.Name = "lblAtivoInativo";
+            this.lblAtivoInativo.Size = new System.Drawing.Size(79, 15);
+            this.lblAtivoInativo.TabIndex = 36;
+            this.lblAtivoInativo.Text = "Ativo/Inativo:";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.cbxAtivo, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cbxInativo, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 43);
+            this.tableLayoutPanel3.TabIndex = 37;
+            // 
+            // cbxAtivo
+            // 
+            this.cbxAtivo.AutoSize = true;
+            this.cbxAtivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.cbxAtivo.Location = new System.Drawing.Point(2, 2);
+            this.cbxAtivo.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxAtivo.Name = "cbxAtivo";
+            this.cbxAtivo.Size = new System.Drawing.Size(54, 19);
+            this.cbxAtivo.TabIndex = 0;
+            this.cbxAtivo.Text = "Ativo";
+            this.cbxAtivo.UseVisualStyleBackColor = true;
+            // 
+            // cbxInativo
+            // 
+            this.cbxInativo.AutoSize = true;
+            this.cbxInativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.cbxInativo.Location = new System.Drawing.Point(142, 2);
+            this.cbxInativo.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxInativo.Name = "cbxInativo";
+            this.cbxInativo.Size = new System.Drawing.Size(62, 19);
+            this.cbxInativo.TabIndex = 1;
+            this.cbxInativo.Text = "Inativo";
+            this.cbxInativo.UseVisualStyleBackColor = true;
             // 
             // AdicionarProduto
             // 
@@ -378,10 +415,12 @@
             this.tblPanel1.ResumeLayout(false);
             this.tblPanel1.PerformLayout();
             this.tblPanel4.ResumeLayout(false);
-            this.gbxAtivoInativo.ResumeLayout(false);
-            this.gbxAtivoInativo.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,23 +430,25 @@
         private System.Windows.Forms.TableLayoutPanel tblPanel1;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblIdProduto;
-        private System.Windows.Forms.MaskedTextBox mtxPreco;
-        private System.Windows.Forms.MaskedTextBox mtxIdProduto;
+        private System.Windows.Forms.MaskedTextBox mtbIdProduto;
+        private System.Windows.Forms.MaskedTextBox mtbPreco;
         private System.Windows.Forms.TableLayoutPanel tblPanel2;
-        private System.Windows.Forms.Label lblNomeCompleto;
-        private System.Windows.Forms.TextBox txtNomeCompleto;
+        private System.Windows.Forms.Label lblNomeProduto;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.TableLayoutPanel tblPanel3;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TableLayoutPanel tblPanel4;
-        private System.Windows.Forms.GroupBox gbxAtivoInativo;
-        private System.Windows.Forms.RadioButton rdbInativo;
-        private System.Windows.Forms.RadioButton rdbAtivo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label lblTempoPreparo;
-        private System.Windows.Forms.MaskedTextBox mtxTempoPreparo;
+        private System.Windows.Forms.MaskedTextBox mtbTempoPreparo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdicionarProduto;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lblAtivoInativo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.CheckBox cbxAtivo;
+        private System.Windows.Forms.CheckBox cbxInativo;
     }
 }

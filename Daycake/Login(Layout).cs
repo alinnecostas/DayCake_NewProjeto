@@ -68,6 +68,11 @@ namespace Daycake
 
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

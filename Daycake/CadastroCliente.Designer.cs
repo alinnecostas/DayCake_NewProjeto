@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroConsultaClientes));
             this.tabControlConsultaCliente = new System.Windows.Forms.TabControl();
             this.tabCadastroCliente = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -158,7 +159,7 @@
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.07692F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.021978F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.9011F));
-            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel4.Controls.Add(this.txtNumero, 3, 1);
             this.tblPanel4.Controls.Add(this.lblEndereco, 1, 0);
             this.tblPanel4.Controls.Add(this.txtEndereco, 1, 1);
@@ -176,11 +177,11 @@
             // txtNumero
             // 
             this.txtNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.txtNumero.Location = new System.Drawing.Point(414, 18);
+            this.txtNumero.Location = new System.Drawing.Point(416, 18);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(347, 25);
+            this.txtNumero.Size = new System.Drawing.Size(348, 25);
             this.txtNumero.TabIndex = 39;
             // 
             // lblEndereco
@@ -208,7 +209,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblNumero.Location = new System.Drawing.Point(414, 0);
+            this.lblNumero.Location = new System.Drawing.Point(416, 0);
             this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(54, 15);
@@ -415,7 +416,7 @@
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35165F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.296703F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35165F));
-            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel1.Controls.Add(this.mtbDataCadastro, 3, 1);
             this.tblPanel1.Controls.Add(this.lblDataCadastro, 3, 0);
             this.tblPanel1.Controls.Add(this.mtbIdCliente, 1, 1);
@@ -433,18 +434,18 @@
             // mtbDataCadastro
             // 
             this.mtbDataCadastro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtbDataCadastro.Location = new System.Drawing.Point(418, 25);
+            this.mtbDataCadastro.Location = new System.Drawing.Point(420, 25);
             this.mtbDataCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbDataCadastro.Mask = "00/00/0000";
             this.mtbDataCadastro.Name = "mtbDataCadastro";
-            this.mtbDataCadastro.Size = new System.Drawing.Size(343, 23);
+            this.mtbDataCadastro.Size = new System.Drawing.Size(344, 23);
             this.mtbDataCadastro.TabIndex = 49;
             // 
             // lblDataCadastro
             // 
             this.lblDataCadastro.AutoSize = true;
             this.lblDataCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblDataCadastro.Location = new System.Drawing.Point(418, 0);
+            this.lblDataCadastro.Location = new System.Drawing.Point(420, 0);
             this.lblDataCadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataCadastro.Name = "lblDataCadastro";
             this.lblDataCadastro.Size = new System.Drawing.Size(100, 15);
@@ -458,7 +459,7 @@
             this.mtbIdCliente.Location = new System.Drawing.Point(44, 25);
             this.mtbIdCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbIdCliente.Name = "mtbIdCliente";
-            this.mtbIdCliente.Size = new System.Drawing.Size(343, 23);
+            this.mtbIdCliente.Size = new System.Drawing.Size(344, 23);
             this.mtbIdCliente.TabIndex = 35;
             // 
             // lblIdCliente
@@ -578,12 +579,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login1;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.tabControlConsultaCliente);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroConsultaClientes";

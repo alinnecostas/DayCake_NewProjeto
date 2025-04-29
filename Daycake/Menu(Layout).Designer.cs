@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.mnsCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsCadastro = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPedidos = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,8 +118,7 @@
             // 
             // mnsMenu
             // 
-            this.mnsMenu.BackColor = System.Drawing.Color.White;
-            this.mnsMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
+            this.mnsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -146,7 +146,9 @@
             this.picMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login__1_;
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picMenu.Cursor = System.Windows.Forms.Cursors.No;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picMenu.InitialImage = global::Daycake.Properties.Resources.Daycake;
             this.picMenu.Location = new System.Drawing.Point(0, 24);
             this.picMenu.Name = "picMenu";
             this.picMenu.Size = new System.Drawing.Size(811, 485);
@@ -158,12 +160,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(811, 509);
             this.Controls.Add(this.picMenu);
             this.Controls.Add(this.mnsMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnsMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

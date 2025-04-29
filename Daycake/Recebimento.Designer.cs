@@ -233,6 +233,7 @@
             this.Controls.Add(this.tblPanelBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Recebimento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recebimento";
             this.tblPanelBase.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

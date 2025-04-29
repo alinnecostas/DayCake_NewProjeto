@@ -95,8 +95,8 @@
             this.tblPanelBase.Location = new System.Drawing.Point(-4, 0);
             this.tblPanelBase.Name = "tblPanelBase";
             this.tblPanelBase.RowCount = 4;
-            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tblPanelBase.Size = new System.Drawing.Size(802, 425);
@@ -119,9 +119,9 @@
             this.lstListaPedidos.BackColor = System.Drawing.Color.White;
             this.lstListaPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lstListaPedidos.HideSelection = false;
-            this.lstListaPedidos.Location = new System.Drawing.Point(43, 116);
+            this.lstListaPedidos.Location = new System.Drawing.Point(43, 127);
             this.lstListaPedidos.Name = "lstListaPedidos";
-            this.lstListaPedidos.Size = new System.Drawing.Size(716, 268);
+            this.lstListaPedidos.Size = new System.Drawing.Size(716, 251);
             this.lstListaPedidos.TabIndex = 1;
             this.lstListaPedidos.UseCompatibleStateImageBehavior = false;
             // 
@@ -133,13 +133,13 @@
             this.tableLayoutPanel1.Controls.Add(this.btnFiltrar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblFiltre, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(43, 13);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(43, 11);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 97);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 110);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // btnFiltrar
@@ -148,23 +148,27 @@
             this.btnFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnFiltrar.Location = new System.Drawing.Point(3, 72);
+            this.btnFiltrar.Location = new System.Drawing.Point(3, 87);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(710, 22);
+            this.btnFiltrar.Size = new System.Drawing.Size(710, 20);
             this.btnFiltrar.TabIndex = 36;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             // 
             // lblFiltre
             // 
+            this.lblFiltre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltre.AutoSize = true;
-            this.lblFiltre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblFiltre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltre.ForeColor = System.Drawing.Color.IndianRed;
             this.lblFiltre.Location = new System.Drawing.Point(4, 0);
             this.lblFiltre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltre.Name = "lblFiltre";
-            this.lblFiltre.Size = new System.Drawing.Size(99, 13);
+            this.lblFiltre.Size = new System.Drawing.Size(708, 16);
             this.lblFiltre.TabIndex = 35;
             this.lblFiltre.Text = "Filtre aqui o pedido:";
+            this.lblFiltre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -179,13 +183,13 @@
             this.tableLayoutPanel2.Controls.Add(this.dtpDatapedido, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblStatus, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDataPedido, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 36);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(710, 47);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(710, 45);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dateTimePicker1
@@ -344,6 +348,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControlStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

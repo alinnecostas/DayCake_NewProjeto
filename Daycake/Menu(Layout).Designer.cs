@@ -103,7 +103,7 @@
             this.mnsAdicionarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsAdicionarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsAdicionarProduto.Name = "mnsAdicionarProduto";
-            this.mnsAdicionarProduto.Size = new System.Drawing.Size(180, 22);
+            this.mnsAdicionarProduto.Size = new System.Drawing.Size(171, 22);
             this.mnsAdicionarProduto.Text = "Adicionar Produto";
             this.mnsAdicionarProduto.Click += new System.EventHandler(this.mnsAdicionarProduto_Click);
             // 
@@ -117,7 +117,9 @@
             // 
             // mnsMenu
             // 
-            this.mnsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
+            this.mnsMenu.BackColor = System.Drawing.Color.White;
+            this.mnsMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
+            this.mnsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnsCliente,
@@ -141,7 +143,7 @@
             // 
             // picMenu
             // 
-            this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
+            this.picMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picMenu.Location = new System.Drawing.Point(0, 24);

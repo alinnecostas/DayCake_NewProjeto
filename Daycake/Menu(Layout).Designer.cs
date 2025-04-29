@@ -144,6 +144,7 @@
             // picMenu
             // 
             this.picMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login__1_;
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picMenu.Location = new System.Drawing.Point(0, 24);

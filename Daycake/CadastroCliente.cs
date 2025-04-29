@@ -15,7 +15,7 @@ namespace Daycake
     {
         MySqlConnection Conexao;
 
-        private string data_source = "datasource=localhost;username=root;password=1007;database=Daycake";
+        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=Daycake";
 
 
         public CadastroConsultaClientes()

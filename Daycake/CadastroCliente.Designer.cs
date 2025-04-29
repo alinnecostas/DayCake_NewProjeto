@@ -86,6 +86,7 @@
             this.tabControlConsultaCliente.Controls.Add(this.tabConsultaCliente);
             this.tabControlConsultaCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlConsultaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlConsultaCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControlConsultaCliente.Location = new System.Drawing.Point(0, 0);
             this.tabControlConsultaCliente.Name = "tabControlConsultaCliente";
             this.tabControlConsultaCliente.SelectedIndex = 0;
@@ -98,6 +99,7 @@
             this.tabCadastroCliente.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
             this.tabCadastroCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabCadastroCliente.Controls.Add(this.tableLayoutPanel4);
+            this.tabCadastroCliente.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tabCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCadastroCliente.Location = new System.Drawing.Point(4, 24);
             this.tabCadastroCliente.Name = "tabCadastroCliente";
@@ -413,9 +415,9 @@
             this.tblPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tblPanel1.ColumnCount = 5;
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35165F));
+            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.07692F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.296703F));
-            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.35165F));
+            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.62637F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel1.Controls.Add(this.mtbDataCadastro, 3, 1);
             this.tblPanel1.Controls.Add(this.lblDataCadastro, 3, 0);
@@ -434,18 +436,18 @@
             // mtbDataCadastro
             // 
             this.mtbDataCadastro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtbDataCadastro.Location = new System.Drawing.Point(420, 25);
+            this.mtbDataCadastro.Location = new System.Drawing.Point(418, 25);
             this.mtbDataCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbDataCadastro.Mask = "00/00/0000";
             this.mtbDataCadastro.Name = "mtbDataCadastro";
-            this.mtbDataCadastro.Size = new System.Drawing.Size(344, 23);
+            this.mtbDataCadastro.Size = new System.Drawing.Size(346, 23);
             this.mtbDataCadastro.TabIndex = 49;
             // 
             // lblDataCadastro
             // 
             this.lblDataCadastro.AutoSize = true;
             this.lblDataCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblDataCadastro.Location = new System.Drawing.Point(420, 0);
+            this.lblDataCadastro.Location = new System.Drawing.Point(418, 0);
             this.lblDataCadastro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataCadastro.Name = "lblDataCadastro";
             this.lblDataCadastro.Size = new System.Drawing.Size(100, 15);
@@ -459,7 +461,7 @@
             this.mtbIdCliente.Location = new System.Drawing.Point(44, 25);
             this.mtbIdCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbIdCliente.Name = "mtbIdCliente";
-            this.mtbIdCliente.Size = new System.Drawing.Size(344, 23);
+            this.mtbIdCliente.Size = new System.Drawing.Size(342, 23);
             this.mtbIdCliente.TabIndex = 35;
             // 
             // lblIdCliente

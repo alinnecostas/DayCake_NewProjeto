@@ -35,12 +35,7 @@ namespace Daycake
             FormPedido form = new FormPedido();
             form.ShowDialog();
         }
-
-        private void mnsAdicionarProduto_Click(object sender, EventArgs e)
-        {
-            AdicionarProduto form = new AdicionarProduto();
-            form.ShowDialog();
-        }
+           
 
         private void mnsClientes_Click(object sender, EventArgs e)
         {
@@ -50,41 +45,32 @@ namespace Daycake
 
         private void mnsListaProdutos_Click(object sender, EventArgs e)
         {
-            FormListaProdutos form = new FormListaProdutos();
+            Produtos form = new Produtos();
             form.ShowDialog();
         }
 
         private void mnsRecebimentos_Click(object sender, EventArgs e)
         {
-            Recebimentos form = new Recebimentos();
+            Recebimento form = new Recebimento();
             form.ShowDialog();
         }
 
-        private void picMenu_Click(object sender, EventArgs e)
+        private void mnsAdicionarProduto_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mnsConsultarPedidos_Click_1(object sender, EventArgs e)
-        {
-            FormListaPedidos form = new FormListaPedidos();
+            Produtos form = new Produtos();
             form.ShowDialog();
         }
 
-        private void mnsListaProdutos_Click_1(object sender, EventArgs e)
+        private void mnsRecebimentos_Click_1(object sender, EventArgs e)
         {
-            Form form = new FormListaProdutos();
+            Recebimento form = new Recebimento();
             form.ShowDialog();
         }
 
-        private void mnsClientes_Click_1(object sender, EventArgs e)
+        private void statusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+            Status form = new Status();
+            form.ShowDialog();
         }
     }
 }

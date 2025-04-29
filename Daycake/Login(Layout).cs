@@ -60,7 +60,14 @@ namespace Daycake
             }
         }
 
+        private void btnAcessar_Click_1(object sender, EventArgs e)
+        {
+            //depois de abrir o menu, sem usar o hide:
 
+            FormMenu menu = new FormMenu();
+
+
+        }
     }
 
 }

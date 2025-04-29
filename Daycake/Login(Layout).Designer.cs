@@ -122,6 +122,7 @@
             this.btnAcessar.TabIndex = 5;
             this.btnAcessar.Text = "Acessar";
             this.btnAcessar.UseVisualStyleBackColor = false;
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click_1);
             // 
             // picLogo
             // 

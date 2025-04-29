@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Daycake
 {
-    public partial class FormPedido : Form
+    public partial class Produtos : Form
     {
-        // No construtor de Pedidos.cs  
-        public FormPedido()
+        public Produtos()
         {
             InitializeComponent();
-
-        }
-
-        private void tabConsultarPedidos_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

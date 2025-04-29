@@ -51,9 +51,9 @@
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.mtxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.tblPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.mtbDataCadastro = new System.Windows.Forms.MaskedTextBox();
+            this.dtpDatacadastro = new System.Windows.Forms.DateTimePicker();
             this.lblDataCadastro = new System.Windows.Forms.Label();
             this.mtbIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
@@ -62,8 +62,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.lstListaClientes = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBusca = new System.Windows.Forms.Button();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.tabControlConsultaCliente.SuspendLayout();
             this.tabCadastroCliente.SuspendLayout();
@@ -161,7 +161,7 @@
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.07692F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.021978F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.9011F));
-            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tblPanel4.Controls.Add(this.txtNumero, 3, 1);
             this.tblPanel4.Controls.Add(this.lblEndereco, 1, 0);
             this.tblPanel4.Controls.Add(this.txtEndereco, 1, 1);
@@ -179,7 +179,7 @@
             // txtNumero
             // 
             this.txtNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.txtNumero.Location = new System.Drawing.Point(416, 18);
+            this.txtNumero.Location = new System.Drawing.Point(415, 18);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
@@ -211,7 +211,7 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblNumero.Location = new System.Drawing.Point(416, 0);
+            this.lblNumero.Location = new System.Drawing.Point(415, 0);
             this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(54, 15);
@@ -332,6 +332,7 @@
             this.btnCadastrarCliente.TabIndex = 39;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // btnVoltar
             // 
@@ -359,7 +360,7 @@
             this.tblPanel5.Controls.Add(this.lblBairro, 1, 0);
             this.tblPanel5.Controls.Add(this.txtBairro, 1, 1);
             this.tblPanel5.Controls.Add(this.lblTelefone, 3, 0);
-            this.tblPanel5.Controls.Add(this.mtxTelefone, 3, 1);
+            this.tblPanel5.Controls.Add(this.mtbTelefone, 3, 1);
             this.tblPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel5.Location = new System.Drawing.Point(4, 250);
             this.tblPanel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -402,13 +403,13 @@
             this.lblTelefone.TabIndex = 35;
             this.lblTelefone.Text = "Telefone:";
             // 
-            // mtxTelefone
+            // mtbTelefone
             // 
-            this.mtxTelefone.Location = new System.Drawing.Point(415, 20);
-            this.mtxTelefone.Mask = "00000-9999";
-            this.mtxTelefone.Name = "mtxTelefone";
-            this.mtxTelefone.Size = new System.Drawing.Size(350, 23);
-            this.mtxTelefone.TabIndex = 39;
+            this.mtbTelefone.Location = new System.Drawing.Point(415, 20);
+            this.mtbTelefone.Mask = "00000-9999";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(350, 23);
+            this.mtbTelefone.TabIndex = 39;
             // 
             // tblPanel1
             // 
@@ -418,8 +419,8 @@
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.07692F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.296703F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.62637F));
-            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanel1.Controls.Add(this.mtbDataCadastro, 3, 1);
+            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tblPanel1.Controls.Add(this.dtpDatacadastro, 3, 1);
             this.tblPanel1.Controls.Add(this.lblDataCadastro, 3, 0);
             this.tblPanel1.Controls.Add(this.mtbIdCliente, 1, 1);
             this.tblPanel1.Controls.Add(this.lblIdCliente, 1, 0);
@@ -433,15 +434,12 @@
             this.tblPanel1.Size = new System.Drawing.Size(809, 55);
             this.tblPanel1.TabIndex = 0;
             // 
-            // mtbDataCadastro
+            // dtpDatacadastro
             // 
-            this.mtbDataCadastro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtbDataCadastro.Location = new System.Drawing.Point(418, 25);
-            this.mtbDataCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.mtbDataCadastro.Mask = "00/00/0000";
-            this.mtbDataCadastro.Name = "mtbDataCadastro";
-            this.mtbDataCadastro.Size = new System.Drawing.Size(346, 23);
-            this.mtbDataCadastro.TabIndex = 49;
+            this.dtpDatacadastro.Location = new System.Drawing.Point(417, 25);
+            this.dtpDatacadastro.Name = "dtpDatacadastro";
+            this.dtpDatacadastro.Size = new System.Drawing.Size(348, 23);
+            this.dtpDatacadastro.TabIndex = 37;
             // 
             // lblDataCadastro
             // 
@@ -518,6 +516,8 @@
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lstListaClientes
             // 
@@ -529,15 +529,16 @@
             this.lstListaClientes.Size = new System.Drawing.Size(753, 287);
             this.lstListaClientes.TabIndex = 1;
             this.lstListaClientes.UseCompatibleStateImageBehavior = false;
+            this.lstListaClientes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstListaClientes_ItemSelectionChanged);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel2.Controls.Add(this.btnBuscar, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBuscar, 0, 1);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel2.Controls.Add(this.btnBusca, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtBusca, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblBuscar, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 13);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -547,25 +548,26 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(753, 54);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btnBuscar
+            // btnBusca
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnBuscar.Location = new System.Drawing.Point(653, 22);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(97, 23);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnBusca.Location = new System.Drawing.Point(653, 22);
+            this.btnBusca.Name = "btnBusca";
+            this.btnBusca.Size = new System.Drawing.Size(97, 23);
+            this.btnBusca.TabIndex = 6;
+            this.btnBusca.Text = "Buscar";
+            this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
-            // txtBuscar
+            // txtBusca
             // 
-            this.txtBuscar.BackColor = System.Drawing.Color.White;
-            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.txtBuscar.Location = new System.Drawing.Point(3, 22);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(603, 21);
-            this.txtBuscar.TabIndex = 5;
+            this.txtBusca.BackColor = System.Drawing.Color.White;
+            this.txtBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.txtBusca.Location = new System.Drawing.Point(3, 22);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(602, 21);
+            this.txtBusca.TabIndex = 5;
             // 
             // lblBuscar
             // 
@@ -632,7 +634,6 @@
         private System.Windows.Forms.TableLayoutPanel tblPanel1;
         private System.Windows.Forms.MaskedTextBox mtbIdCliente;
         private System.Windows.Forms.Label lblIdCliente;
-        private System.Windows.Forms.MaskedTextBox mtbDataCadastro;
         private System.Windows.Forms.Label lblDataCadastro;
         private System.Windows.Forms.TableLayoutPanel tblPanel4;
         private System.Windows.Forms.Label lblEndereco;
@@ -641,7 +642,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblNomeCompleto;
         private System.Windows.Forms.TextBox txtNomeCompleto;
-        private System.Windows.Forms.MaskedTextBox mtxTelefone;
+        private System.Windows.Forms.MaskedTextBox mtbTelefone;
         private System.Windows.Forms.TabPage tabConsultaCliente;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label lblNumero;
@@ -651,9 +652,10 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ListView lstListaClientes;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBusca;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.DateTimePicker dtpDatacadastro;
     }
 }

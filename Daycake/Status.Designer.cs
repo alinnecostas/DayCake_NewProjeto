@@ -37,13 +37,13 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.lblFiltre = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblDataEntrega = new System.Windows.Forms.Label();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.dtpDatapedido = new System.Windows.Forms.DateTimePicker();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblDataPedido = new System.Windows.Forms.Label();
             this.tabRelatorio = new System.Windows.Forms.TabPage();
-            this.lblDataEntrega = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -171,7 +171,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblDataEntrega, 1, 0);
@@ -187,6 +187,23 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(710, 47);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(238, 23);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // lblDataEntrega
+            // 
+            this.lblDataEntrega.AutoSize = true;
+            this.lblDataEntrega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblDataEntrega.Location = new System.Drawing.Point(238, 0);
+            this.lblDataEntrega.Name = "lblDataEntrega";
+            this.lblDataEntrega.Size = new System.Drawing.Size(87, 13);
+            this.lblDataEntrega.TabIndex = 15;
+            this.lblDataEntrega.Text = "Data do entrega:";
             // 
             // cbxStatus
             // 
@@ -233,23 +250,6 @@
             this.tabRelatorio.TabIndex = 1;
             this.tabRelatorio.Text = "Relatório";
             this.tabRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // lblDataEntrega
-            // 
-            this.lblDataEntrega.AutoSize = true;
-            this.lblDataEntrega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblDataEntrega.Location = new System.Drawing.Point(238, 0);
-            this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(87, 13);
-            this.lblDataEntrega.TabIndex = 15;
-            this.lblDataEntrega.Text = "Data do entrega:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(238, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(215, 20);
-            this.dateTimePicker1.TabIndex = 16;
             // 
             // tableLayoutPanel3
             // 
@@ -329,7 +329,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -346,9 +346,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControlStatus);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Status";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Status";
             this.tabControlStatus.ResumeLayout(false);
             this.tabStatusPedido.ResumeLayout(false);

@@ -30,7 +30,6 @@
         {
             this.tabControlProdutos = new System.Windows.Forms.TabControl();
             this.tabCadastroProdutos = new System.Windows.Forms.TabPage();
-            this.tabConsultaProdutos = new System.Windows.Forms.TabPage();
             this.tblPanelBaseProduto = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdicionarProduto = new System.Windows.Forms.Button();
@@ -53,6 +52,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblAtivoInativo = new System.Windows.Forms.Label();
             this.cbxAtivoInativo = new System.Windows.Forms.ComboBox();
+            this.tabConsultaProdutos = new System.Windows.Forms.TabPage();
             this.tblPanelBase = new System.Windows.Forms.TableLayoutPanel();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.lstListaClientes = new System.Windows.Forms.ListView();
@@ -62,7 +62,6 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.tabControlProdutos.SuspendLayout();
             this.tabCadastroProdutos.SuspendLayout();
-            this.tabConsultaProdutos.SuspendLayout();
             this.tblPanelBaseProduto.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tblPanel3.SuspendLayout();
@@ -71,6 +70,7 @@
             this.tblPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tabConsultaProdutos.SuspendLayout();
             this.tblPanelBase.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -95,17 +95,6 @@
             this.tabCadastroProdutos.TabIndex = 0;
             this.tabCadastroProdutos.Text = "Cadastro Produto";
             this.tabCadastroProdutos.UseVisualStyleBackColor = true;
-            // 
-            // tabConsultaProdutos
-            // 
-            this.tabConsultaProdutos.Controls.Add(this.tblPanelBase);
-            this.tabConsultaProdutos.Location = new System.Drawing.Point(4, 22);
-            this.tabConsultaProdutos.Name = "tabConsultaProdutos";
-            this.tabConsultaProdutos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsultaProdutos.Size = new System.Drawing.Size(793, 426);
-            this.tabConsultaProdutos.TabIndex = 1;
-            this.tabConsultaProdutos.Text = "Consulta Produtos";
-            this.tabConsultaProdutos.UseVisualStyleBackColor = true;
             // 
             // tblPanelBaseProduto
             // 
@@ -368,7 +357,7 @@
             this.lblTempoPreparo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lblTempoPreparo.Location = new System.Drawing.Point(3, 0);
             this.lblTempoPreparo.Name = "lblTempoPreparo";
-            this.lblTempoPreparo.Size = new System.Drawing.Size(106, 15);
+            this.lblTempoPreparo.Size = new System.Drawing.Size(107, 15);
             this.lblTempoPreparo.TabIndex = 35;
             this.lblTempoPreparo.Text = "Tempo de Preparo:";
             // 
@@ -404,6 +393,17 @@
             this.cbxAtivoInativo.Name = "cbxAtivoInativo";
             this.cbxAtivoInativo.Size = new System.Drawing.Size(278, 23);
             this.cbxAtivoInativo.TabIndex = 37;
+            // 
+            // tabConsultaProdutos
+            // 
+            this.tabConsultaProdutos.Controls.Add(this.tblPanelBase);
+            this.tabConsultaProdutos.Location = new System.Drawing.Point(4, 22);
+            this.tabConsultaProdutos.Name = "tabConsultaProdutos";
+            this.tabConsultaProdutos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConsultaProdutos.Size = new System.Drawing.Size(793, 426);
+            this.tabConsultaProdutos.TabIndex = 1;
+            this.tabConsultaProdutos.Text = "Consulta Produtos";
+            this.tabConsultaProdutos.UseVisualStyleBackColor = true;
             // 
             // tblPanelBase
             // 
@@ -453,7 +453,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtBuscar, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblBuscar, 0, 0);
@@ -482,7 +482,7 @@
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtBuscar.Location = new System.Drawing.Point(3, 22);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(604, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(603, 20);
             this.txtBuscar.TabIndex = 5;
             // 
             // lblBuscar
@@ -501,13 +501,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControlProdutos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Produtos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
             this.tabControlProdutos.ResumeLayout(false);
             this.tabCadastroProdutos.ResumeLayout(false);
-            this.tabConsultaProdutos.ResumeLayout(false);
             this.tblPanelBaseProduto.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -522,6 +523,7 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tabConsultaProdutos.ResumeLayout(false);
             this.tblPanelBase.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();

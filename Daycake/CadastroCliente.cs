@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,8 @@ namespace Daycake
     public partial class CadastroConsultaClientes : Form
     {
         MySqlConnection Conexao;
-
-        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=Daycake";
+        private string data_source = "datasource=localhost;username=root;database=daycake";
         public int? id_cliente_selecionado = null;
-
 
         public CadastroConsultaClientes()
         {
@@ -39,7 +38,6 @@ namespace Daycake
         }
 
 
-
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             try
@@ -58,18 +56,17 @@ namespace Daycake
                     cmd.Parameters.Clear(); // limpa os parâmetros antigos
                     cmd.CommandText =
                         "INSERT INTO cliente " +
-                        "(nome, telefone, email, endereco, bairro, data_cadastro) " +
+                        "(nome, telefone, email, endereco, bairro, numero, data_cadastro) " +
                         "VALUES " +
-                        "(@nome, @telefone, @email, @endereco, @bairro, @data_cadastro)";
+                        "(@nome, @telefone, @email, @endereco, @bairro, @numero, @data_cadastro)";
 
                     cmd.Parameters.AddWithValue("@nome", txtNomeCompleto.Text);
-                    cmd.Parameters.AddWithValue("@telefone", mtbTelefone.Text);
+                    cmd.Parameters.AddWithValue("@telefone", mtxTelefone.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                     cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
                     cmd.Parameters.AddWithValue("@numero", txtNumero.Text);
-                    cmd.Parameters.AddWithValue("@data_cadastro", dtpDatacadastro.Text);
-
+                    cmd.Parameters.AddWithValue("@data_cadastro", mtbDataCadastro.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cliente Inserido com Sucesso", "Sucesso",
@@ -82,17 +79,16 @@ namespace Daycake
                     cmd.Parameters.Clear(); // limpa os parâmetros antigos
                     cmd.CommandText =
                         "UPDATE cliente " +
-                        "SET nome = @nome, telefone = @telefone, email = @email, endereco = @endereco, bairro = @bairro, data_cadastro = @data_cadastro " +
+                        "SET nome = @nome, telefone = @telefone, email = @email, endereco = @endereco, bairro = @bairro, numero = @numero, data_cadastro = @data_cadastro " +
                         "WHERE idCliente = @idCliente";
 
                     cmd.Parameters.AddWithValue("@nome", txtNomeCompleto.Text);
-                    cmd.Parameters.AddWithValue("@telefone", mtbTelefone.Text);
+                    cmd.Parameters.AddWithValue("@telefone", mtxTelefone.Text);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                     cmd.Parameters.AddWithValue("@bairro", txtBairro.Text);
                     cmd.Parameters.AddWithValue("@numero", txtNumero.Text);
-                    cmd.Parameters.AddWithValue("@data_cadastro", dtpDatacadastro.Text);
-
+                    cmd.Parameters.AddWithValue("@data_cadastro", mtbDataCadastro.Text);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Cliente Atualizado com Sucesso", "Sucesso",
@@ -116,7 +112,9 @@ namespace Daycake
             {
                 Conexao.Close();
             }
+
         }
+
 
 
         private void btnBusca_Click(object sender, EventArgs e)
@@ -130,10 +128,10 @@ namespace Daycake
 
                 // Query com busca por nome, email ou telefone
                 string sql = @"SELECT idCliente, nome, telefone, email, endereco, bairro, data_cadastro 
-                      FROM Cliente 
-                      WHERE nome LIKE @termo 
-                      OR email LIKE @termo 
-                      OR telefone LIKE @termo";
+                       FROM Cliente 
+                       WHERE nome LIKE @termo 
+                       OR email LIKE @termo 
+                       OR telefone LIKE @termo";
 
                 Conexao.Open();
 
@@ -176,35 +174,8 @@ namespace Daycake
             }
         }
 
-        private void lstListaClientes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            ListView.SelectedListViewItemCollection itens_selecionados = lstListaClientes.SelectedItems;
-
-
-            foreach (ListViewItem item in itens_selecionados)
-            {
-                id_cliente_selecionado = Convert.ToInt32(item.SubItems[0].Text);
-                // extrai o valor de cada uma das variáveis (colunas)
-                txtNomeCompleto.Text = item.SubItems[1].Text;
-                txtEmail.Text = item.SubItems[2].Text;
-                mtbTelefone.Text = item.SubItems[3].Text;
-                txtNomeCompleto.Text = item.SubItems[4].Text;
-                mtbTelefone.Text = item.SubItems[3].Text;
-                txtEndereco.Text = item.SubItems[5].Text;
-                txtBairro.Text = item.SubItems[6].Text;
-                txtNumero.Text = item.SubItems[7].Text;
-                dtpDatacadastro.Text = item.SubItems[8].Text;
-
-                //  MessageBox.Show("Id Selecionado = " + id_contato_selecionado);
-            }
-
-            btnExcluir.Visible = true;
-
-        }
-
-
-
         private void carregar_contatos()
+
         {
             try
             {
@@ -229,17 +200,18 @@ namespace Daycake
                 {
                     string[] row =
                     {
-                        // obtendo as informações do banco de dados (vetor de strings)
-                        reader.GetInt32(0).ToString(),  
-                        reader.GetString(1),            
-                        reader.GetString(2),            
-                        reader.GetString(3),
-                        reader.GetString(4),
-                        reader.GetString(5),
-                        reader.GetString(7)                                               
-                    };
+                         // obtendo as informações do banco de dados (vetor de strings)
+                         reader.GetInt32(0).ToString(),
+                         reader.GetString(1),
+                         reader.GetString(2),
+                         reader.GetString(3),
+                         reader.GetString(4),
+                         reader.GetString(5),
+                         reader.GetString(7)
+                     };
 
                     var linha_list_view = new ListViewItem(row);
+                    lstListaClientes.Items.Add(linha_list_view);
 
                 }
 
@@ -256,18 +228,53 @@ namespace Daycake
         }
 
 
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void lstListaClientes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            excluir_contato();
+            ListView.SelectedListViewItemCollection itens_selecionados = lstListaClientes.SelectedItems;
+
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+                id_cliente_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+                txtNomeCompleto.Text = item.SubItems[1].Text;
+                txtEmail.Text = item.SubItems[2].Text;
+                mtxTelefone.Text = item.SubItems[3].Text;
+                txtEndereco.Text = item.SubItems[4].Text;
+                txtBairro.Text = item.SubItems[5].Text;
+                txtNumero.Text = item.SubItems[6].Text;
+                mtbDataCadastro.Text = item.SubItems[7].Text;
+
+                //  MessageBox.Show("Id Selecionado = " + id_contato_selecionado);
+            }
+
+            // menuStrip1.Visible = true;
+
+                     
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void lstContatos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            excluir_contato();
+
+            ListView.SelectedListViewItemCollection itens_selecionados = lstListaClientes.SelectedItems;
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+                id_cliente_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+                // extrai o valor de cada uma das variáveis (colunas)
+                txtNomeCompleto.Text = item.SubItems[1].Text;
+                txtEmail.Text = item.SubItems[2].Text;
+                mtxTelefone.Text = item.SubItems[3].Text;       
+                txtEndereco.Text = item.SubItems[4].Text;
+                txtBairro.Text = item.SubItems[5].Text;
+                txtNumero.Text = item.SubItems[6].Text;
+                mtbDataCadastro.Text = item.SubItems[7].Text;
+
+                //  MessageBox.Show("Id Selecionado = " + id_contato_selecionado);
+            }
+
+            //btnExcluir.Visible = true;
 
         }
-
 
         private void excluir_contato()
         {
@@ -302,10 +309,10 @@ namespace Daycake
                             );
 
 
-                    carregar_contatos();
+                   carregar_contatos();
 
 
-                 
+                   // zerar_forms();
                 }
             }
             catch (MySqlException ex)
@@ -325,6 +332,21 @@ namespace Daycake
                 Conexao.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            excluir_contato();
+        }
+
+
+        private void zerarFormulario()
+        {
+            //id_contato_selecionado = null;
+            //txtNome.Text = String.Empty;
+            //txtEmail.Text = "";
+            //txtTelefone.Text = "";
+            //txtNome.Focus();
+
+        }
     }
 }
-

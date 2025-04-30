@@ -51,20 +51,23 @@
             this.lblBairro = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.tblPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtpDatacadastro = new System.Windows.Forms.DateTimePicker();
+            this.mtbDataCadastro = new System.Windows.Forms.MaskedTextBox();
             this.lblDataCadastro = new System.Windows.Forms.Label();
             this.mtbIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
             this.tabConsultaCliente = new System.Windows.Forms.TabPage();
             this.tblPanelBase = new System.Windows.Forms.TableLayoutPanel();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.lstListaClientes = new System.Windows.Forms.ListView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnBusca = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControlConsultaCliente.SuspendLayout();
             this.tabCadastroCliente.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -78,6 +81,8 @@
             this.tabConsultaCliente.SuspendLayout();
             this.tblPanelBase.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlConsultaCliente
@@ -161,7 +166,7 @@
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.07692F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.021978F));
             this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.9011F));
-            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tblPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tblPanel4.Controls.Add(this.txtNumero, 3, 1);
             this.tblPanel4.Controls.Add(this.lblEndereco, 1, 0);
             this.tblPanel4.Controls.Add(this.txtEndereco, 1, 1);
@@ -179,11 +184,11 @@
             // txtNumero
             // 
             this.txtNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.txtNumero.Location = new System.Drawing.Point(415, 18);
+            this.txtNumero.Location = new System.Drawing.Point(408, 18);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNumero.Multiline = true;
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(348, 25);
+            this.txtNumero.Size = new System.Drawing.Size(341, 25);
             this.txtNumero.TabIndex = 39;
             // 
             // lblEndereco
@@ -204,14 +209,14 @@
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(341, 25);
+            this.txtEndereco.Size = new System.Drawing.Size(335, 25);
             this.txtEndereco.TabIndex = 37;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblNumero.Location = new System.Drawing.Point(415, 0);
+            this.lblNumero.Location = new System.Drawing.Point(408, 0);
             this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(54, 15);
@@ -360,7 +365,7 @@
             this.tblPanel5.Controls.Add(this.lblBairro, 1, 0);
             this.tblPanel5.Controls.Add(this.txtBairro, 1, 1);
             this.tblPanel5.Controls.Add(this.lblTelefone, 3, 0);
-            this.tblPanel5.Controls.Add(this.mtbTelefone, 3, 1);
+            this.tblPanel5.Controls.Add(this.mtxTelefone, 3, 1);
             this.tblPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel5.Location = new System.Drawing.Point(4, 250);
             this.tblPanel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -399,17 +404,17 @@
             this.lblTelefone.Location = new System.Drawing.Point(416, 0);
             this.lblTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(55, 15);
+            this.lblTelefone.Size = new System.Drawing.Size(54, 15);
             this.lblTelefone.TabIndex = 35;
             this.lblTelefone.Text = "Telefone:";
             // 
-            // mtbTelefone
+            // mtxTelefone
             // 
-            this.mtbTelefone.Location = new System.Drawing.Point(415, 20);
-            this.mtbTelefone.Mask = "00000-9999";
-            this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(350, 23);
-            this.mtbTelefone.TabIndex = 39;
+            this.mtxTelefone.Location = new System.Drawing.Point(415, 20);
+            this.mtxTelefone.Mask = "00000-9999";
+            this.mtxTelefone.Name = "mtxTelefone";
+            this.mtxTelefone.Size = new System.Drawing.Size(350, 23);
+            this.mtxTelefone.TabIndex = 39;
             // 
             // tblPanel1
             // 
@@ -420,7 +425,7 @@
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.296703F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.62637F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tblPanel1.Controls.Add(this.dtpDatacadastro, 3, 1);
+            this.tblPanel1.Controls.Add(this.mtbDataCadastro, 3, 1);
             this.tblPanel1.Controls.Add(this.lblDataCadastro, 3, 0);
             this.tblPanel1.Controls.Add(this.mtbIdCliente, 1, 1);
             this.tblPanel1.Controls.Add(this.lblIdCliente, 1, 0);
@@ -434,12 +439,14 @@
             this.tblPanel1.Size = new System.Drawing.Size(809, 55);
             this.tblPanel1.TabIndex = 0;
             // 
-            // dtpDatacadastro
+            // mtbDataCadastro
             // 
-            this.dtpDatacadastro.Location = new System.Drawing.Point(417, 25);
-            this.dtpDatacadastro.Name = "dtpDatacadastro";
-            this.dtpDatacadastro.Size = new System.Drawing.Size(348, 23);
-            this.dtpDatacadastro.TabIndex = 37;
+            this.mtbDataCadastro.Location = new System.Drawing.Point(417, 25);
+            this.mtbDataCadastro.Mask = "00/00/0000";
+            this.mtbDataCadastro.Name = "mtbDataCadastro";
+            this.mtbDataCadastro.Size = new System.Drawing.Size(348, 23);
+            this.mtbDataCadastro.TabIndex = 40;
+            this.mtbDataCadastro.ValidatingType = typeof(System.DateTime);
             // 
             // lblDataCadastro
             // 
@@ -489,13 +496,14 @@
             // 
             this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login1;
             this.tblPanelBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tblPanelBase.ColumnCount = 3;
+            this.tblPanelBase.ColumnCount = 4;
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblPanelBase.Controls.Add(this.btnExcluir, 1, 3);
-            this.tblPanelBase.Controls.Add(this.lstListaClientes, 1, 2);
-            this.tblPanelBase.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tblPanelBase.Controls.Add(this.lstListaClientes, 2, 2);
+            this.tblPanelBase.Controls.Add(this.tableLayoutPanel2, 2, 1);
+            this.tblPanelBase.Controls.Add(this.tableLayoutPanel1, 2, 3);
             this.tblPanelBase.Location = new System.Drawing.Point(-4, 0);
             this.tblPanelBase.Name = "tblPanelBase";
             this.tblPanelBase.RowCount = 4;
@@ -506,53 +514,40 @@
             this.tblPanelBase.Size = new System.Drawing.Size(839, 426);
             this.tblPanelBase.TabIndex = 1;
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnExcluir.Location = new System.Drawing.Point(43, 391);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(753, 24);
-            this.btnExcluir.TabIndex = 5;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Visible = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
             // lstListaClientes
             // 
             this.lstListaClientes.BackColor = System.Drawing.Color.White;
             this.lstListaClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lstListaClientes.HideSelection = false;
-            this.lstListaClientes.Location = new System.Drawing.Point(43, 83);
+            this.lstListaClientes.Location = new System.Drawing.Point(63, 83);
             this.lstListaClientes.Name = "lstListaClientes";
-            this.lstListaClientes.Size = new System.Drawing.Size(753, 287);
+            this.lstListaClientes.Size = new System.Drawing.Size(733, 287);
             this.lstListaClientes.TabIndex = 1;
             this.lstListaClientes.UseCompatibleStateImageBehavior = false;
-            this.lstListaClientes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstListaClientes_ItemSelectionChanged);
+         
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel2.Controls.Add(this.btnBusca, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtBusca, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblBuscar, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 13);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(63, 13);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(753, 54);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(733, 54);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnBusca
             // 
             this.btnBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnBusca.Location = new System.Drawing.Point(653, 22);
+            this.btnBusca.Location = new System.Drawing.Point(633, 22);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(97, 23);
             this.btnBusca.TabIndex = 6;
@@ -566,7 +561,7 @@
             this.txtBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtBusca.Location = new System.Drawing.Point(3, 22);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(602, 21);
+            this.txtBusca.Size = new System.Drawing.Size(571, 21);
             this.txtBusca.TabIndex = 5;
             // 
             // lblBuscar
@@ -578,6 +573,49 @@
             this.lblBuscar.Size = new System.Drawing.Size(111, 15);
             this.lblBuscar.TabIndex = 4;
             this.lblBuscar.Text = "Digite a sua busca:";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(63, 391);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(733, 32);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(126, 32);
+            this.menuStrip2.TabIndex = 3;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.Visible = false;
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(47, 19);
+            this.toolStripMenuItem2.Text = "Excluir";
+            this.toolStripMenuItem2.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(369, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CadastroConsultaClientes
             // 
@@ -615,6 +653,10 @@
             this.tblPanelBase.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -642,20 +684,23 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblNomeCompleto;
         private System.Windows.Forms.TextBox txtNomeCompleto;
-        private System.Windows.Forms.MaskedTextBox mtbTelefone;
+        private System.Windows.Forms.MaskedTextBox mtxTelefone;
         private System.Windows.Forms.TabPage tabConsultaCliente;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TableLayoutPanel tblPanelBase;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ListView lstListaClientes;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnBusca;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.DateTimePicker dtpDatacadastro;
+        private System.Windows.Forms.MaskedTextBox mtbDataCadastro;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

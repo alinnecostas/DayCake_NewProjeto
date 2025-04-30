@@ -58,7 +58,7 @@
             this.mnsCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsCadastro.Name = "mnsCadastro";
-            this.mnsCadastro.Size = new System.Drawing.Size(180, 22);
+            this.mnsCadastro.Size = new System.Drawing.Size(121, 22);
             this.mnsCadastro.Text = "Cadastro";
             this.mnsCadastro.Click += new System.EventHandler(this.mnsCadastro_Click);
             // 
@@ -146,7 +146,7 @@
             this.picMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login__1_;
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picMenu.Cursor = System.Windows.Forms.Cursors.No;
+            this.picMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picMenu.InitialImage = global::Daycake.Properties.Resources.Daycake;
             this.picMenu.Location = new System.Drawing.Point(0, 24);

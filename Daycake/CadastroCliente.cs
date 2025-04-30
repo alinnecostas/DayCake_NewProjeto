@@ -16,7 +16,7 @@ namespace Daycake
     {
         MySqlConnection Conexao;
         private string data_source = "datasource=localhost;username=root;database=daycake";
-        public int? id_cliente_selecionado = null;
+        public int ?id_cliente_selecionado = null;
 
         public CadastroConsultaClientes()
         {
@@ -230,26 +230,7 @@ namespace Daycake
 
         private void lstListaClientes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            ListView.SelectedListViewItemCollection itens_selecionados = lstListaClientes.SelectedItems;
 
-
-            foreach (ListViewItem item in itens_selecionados)
-            {
-                id_cliente_selecionado = Convert.ToInt32(item.SubItems[0].Text);
-                txtNomeCompleto.Text = item.SubItems[1].Text;
-                txtEmail.Text = item.SubItems[2].Text;
-                mtxTelefone.Text = item.SubItems[3].Text;
-                txtEndereco.Text = item.SubItems[4].Text;
-                txtBairro.Text = item.SubItems[5].Text;
-                txtNumero.Text = item.SubItems[6].Text;
-                mtbDataCadastro.Text = item.SubItems[7].Text;
-
-                //  MessageBox.Show("Id Selecionado = " + id_contato_selecionado);
-            }
-
-            // menuStrip1.Visible = true;
-
-                     
         }
 
         private void lstContatos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -286,7 +267,7 @@ namespace Daycake
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Warning);
 
-                if (conf == DialogResult.Yes)
+                if (conf == DialogResult.Yes && id_cliente_selecionado != null)
                 {
 
 
@@ -297,7 +278,7 @@ namespace Daycake
 
                     cmd.Connection = Conexao;
                     cmd.CommandText = "DELETE FROM contato WHERE id=@id";
-                    cmd.Parameters.AddWithValue("@id", id_cliente_selecionado);
+                    cmd.Parameters.AddWithValue("@idCliente ", id_cliente_selecionado);
 
                     cmd.ExecuteNonQuery();
 
@@ -341,11 +322,26 @@ namespace Daycake
 
         private void zerarFormulario()
         {
-            //id_contato_selecionado = null;
-            //txtNome.Text = String.Empty;
-            //txtEmail.Text = "";
-            //txtTelefone.Text = "";
-            //txtNome.Focus();
+            id_cliente_selecionado = null;
+            txtNomeCompleto.Text = "";
+            txtEmail.Text = "";
+            mtxTelefone.Text = "";
+            txtEndereco.Text = "";
+            txtBairro.Text = "";
+            txtNumero.Text = "";
+            mtbDataCadastro.Text = "";
+
+            txtNomeCompleto.Focus();
+
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            excluir_contato();
+        }
+
+        private void lstListaClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

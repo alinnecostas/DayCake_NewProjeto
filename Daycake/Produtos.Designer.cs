@@ -254,7 +254,7 @@
             this.tblPanel1.ColumnCount = 5;
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tblPanel1.Controls.Add(this.mtbIdProduto, 1, 1);
@@ -276,16 +276,16 @@
             this.mtbIdProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mtbIdProduto.Location = new System.Drawing.Point(43, 27);
             this.mtbIdProduto.Name = "mtbIdProduto";
-            this.mtbIdProduto.Size = new System.Drawing.Size(334, 23);
+            this.mtbIdProduto.Size = new System.Drawing.Size(332, 23);
             this.mtbIdProduto.TabIndex = 33;
             // 
             // mtbPreco
             // 
             this.mtbPreco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtbPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.mtbPreco.Location = new System.Drawing.Point(403, 27);
+            this.mtbPreco.Location = new System.Drawing.Point(404, 27);
             this.mtbPreco.Name = "mtbPreco";
-            this.mtbPreco.Size = new System.Drawing.Size(334, 23);
+            this.mtbPreco.Size = new System.Drawing.Size(332, 23);
             this.mtbPreco.TabIndex = 32;
             // 
             // lblIdProduto
@@ -302,7 +302,7 @@
             // 
             this.lblPreco.AutoSize = true;
             this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.lblPreco.Location = new System.Drawing.Point(403, 0);
+            this.lblPreco.Location = new System.Drawing.Point(404, 0);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(40, 15);
             this.lblPreco.TabIndex = 30;
@@ -455,7 +455,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtBuscar, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblBuscar, 0, 0);
@@ -484,7 +484,7 @@
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtBuscar.Location = new System.Drawing.Point(3, 22);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(598, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(597, 20);
             this.txtBuscar.TabIndex = 5;
             // 
             // lblBuscar

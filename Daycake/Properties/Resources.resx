@@ -127,6 +127,9 @@
   <data name="Fundo login (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo login (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fundo Doce ii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo Doce ii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fundo login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,10 +139,13 @@
   <data name="Fundo login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fundo Doce 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo Doce 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FundoDegrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FundoDegrade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo Doce ii" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo Doce ii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fundo Doce iiii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo Doce iiii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

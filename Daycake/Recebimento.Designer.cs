@@ -54,14 +54,14 @@
             this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login1;
             this.tblPanelBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tblPanelBase.ColumnCount = 3;
-            this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tblPanelBase.Controls.Add(this.btnExcluirPedidos, 1, 3);
             this.tblPanelBase.Controls.Add(this.lstListaPedidos, 1, 2);
             this.tblPanelBase.Controls.Add(this.tableLayoutPanel1, 1, 1);
             this.tblPanelBase.Location = new System.Drawing.Point(-1, -2);
-            this.tblPanelBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanelBase.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanelBase.Name = "tblPanelBase";
             this.tblPanelBase.RowCount = 4;
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
@@ -76,8 +76,8 @@
             this.btnExcluirPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluirPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluirPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnExcluirPedidos.Location = new System.Drawing.Point(799, 515);
-            this.btnExcluirPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluirPedidos.Location = new System.Drawing.Point(812, 515);
+            this.btnExcluirPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluirPedidos.Name = "btnExcluirPedidos";
             this.btnExcluirPedidos.Size = new System.Drawing.Size(215, 30);
             this.btnExcluirPedidos.TabIndex = 5;
@@ -87,12 +87,13 @@
             // lstListaPedidos
             // 
             this.lstListaPedidos.BackColor = System.Drawing.Color.White;
+            this.lstListaPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstListaPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lstListaPedidos.HideSelection = false;
-            this.lstListaPedidos.Location = new System.Drawing.Point(57, 143);
-            this.lstListaPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstListaPedidos.Location = new System.Drawing.Point(44, 143);
+            this.lstListaPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.lstListaPedidos.Name = "lstListaPedidos";
-            this.lstListaPedidos.Size = new System.Drawing.Size(955, 363);
+            this.lstListaPedidos.Size = new System.Drawing.Size(983, 364);
             this.lstListaPedidos.TabIndex = 1;
             this.lstListaPedidos.UseCompatibleStateImageBehavior = false;
             // 
@@ -104,14 +105,15 @@
             this.tableLayoutPanel1.Controls.Add(this.btnFiltrar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblFiltro, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 16);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(44, 16);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(956, 119);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(983, 119);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // btnFiltrar
@@ -121,9 +123,9 @@
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnFiltrar.Location = new System.Drawing.Point(4, 89);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(948, 26);
+            this.btnFiltrar.Size = new System.Drawing.Size(975, 26);
             this.btnFiltrar.TabIndex = 36;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -145,7 +147,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
             this.tableLayoutPanel2.Controls.Add(this.cbxStatus, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.dtpDatapedido, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.mtbIdcliente, 1, 1);
@@ -154,20 +156,21 @@
             this.tableLayoutPanel2.Controls.Add(this.lblDataPedido, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblIdCliente, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblIdPedido, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 24);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 30);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(948, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1219, 71);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // cbxStatus
             // 
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Location = new System.Drawing.Point(703, 29);
-            this.cbxStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(239, 24);
             this.cbxStatus.TabIndex = 14;
@@ -175,7 +178,7 @@
             // dtpDatapedido
             // 
             this.dtpDatapedido.Location = new System.Drawing.Point(470, 29);
-            this.dtpDatapedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDatapedido.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDatapedido.Name = "dtpDatapedido";
             this.dtpDatapedido.Size = new System.Drawing.Size(207, 22);
             this.dtpDatapedido.TabIndex = 13;
@@ -183,7 +186,7 @@
             // mtbIdcliente
             // 
             this.mtbIdcliente.Location = new System.Drawing.Point(237, 29);
-            this.mtbIdcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbIdcliente.Margin = new System.Windows.Forms.Padding(4);
             this.mtbIdcliente.Name = "mtbIdcliente";
             this.mtbIdcliente.Size = new System.Drawing.Size(208, 22);
             this.mtbIdcliente.TabIndex = 12;
@@ -191,7 +194,7 @@
             // mtbIdpedido
             // 
             this.mtbIdpedido.Location = new System.Drawing.Point(4, 29);
-            this.mtbIdpedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbIdpedido.Margin = new System.Windows.Forms.Padding(4);
             this.mtbIdpedido.Name = "mtbIdpedido";
             this.mtbIdpedido.Size = new System.Drawing.Size(205, 22);
             this.mtbIdpedido.TabIndex = 11;
@@ -249,7 +252,7 @@
             this.Controls.Add(this.tblPanelBase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Recebimento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recebimento";

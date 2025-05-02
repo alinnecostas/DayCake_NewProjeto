@@ -144,7 +144,7 @@
             // picMenu
             // 
             this.picMenu.BackColor = System.Drawing.Color.MistyRose;
-            this.picMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMenu.BackgroundImage")));
+            this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_Doce_iiii;
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;

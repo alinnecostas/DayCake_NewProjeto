@@ -81,7 +81,7 @@
             this.tabControlProdutos.Controls.Add(this.tabCadastroProdutos);
             this.tabControlProdutos.Controls.Add(this.tabConsultaProdutos);
             this.tabControlProdutos.Location = new System.Drawing.Point(1, -1);
-            this.tabControlProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlProdutos.Name = "tabControlProdutos";
             this.tabControlProdutos.SelectedIndex = 0;
             this.tabControlProdutos.Size = new System.Drawing.Size(1068, 556);
@@ -91,9 +91,9 @@
             // 
             this.tabCadastroProdutos.Controls.Add(this.tblPanelBaseProduto);
             this.tabCadastroProdutos.Location = new System.Drawing.Point(4, 25);
-            this.tabCadastroProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCadastroProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.tabCadastroProdutos.Name = "tabCadastroProdutos";
-            this.tabCadastroProdutos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCadastroProdutos.Padding = new System.Windows.Forms.Padding(4);
             this.tabCadastroProdutos.Size = new System.Drawing.Size(1060, 527);
             this.tabCadastroProdutos.TabIndex = 0;
             this.tabCadastroProdutos.Text = "Cadastro Produto";
@@ -114,7 +114,7 @@
             this.tblPanelBaseProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanelBaseProduto.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tblPanelBaseProduto.Location = new System.Drawing.Point(4, 4);
-            this.tblPanelBaseProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanelBaseProduto.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanelBaseProduto.Name = "tblPanelBaseProduto";
             this.tblPanelBaseProduto.RowCount = 9;
             this.tblPanelBaseProduto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -141,7 +141,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnVoltar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 445);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -156,7 +156,7 @@
             this.btnAdicionarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.btnAdicionarProduto.Location = new System.Drawing.Point(798, 4);
-            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdicionarProduto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdicionarProduto.Name = "btnAdicionarProduto";
             this.btnAdicionarProduto.Size = new System.Drawing.Size(189, 34);
             this.btnAdicionarProduto.TabIndex = 39;
@@ -171,7 +171,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnVoltar.Location = new System.Drawing.Point(57, 4);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(95, 34);
             this.btnVoltar.TabIndex = 38;
@@ -190,7 +190,7 @@
             this.tblPanel3.Controls.Add(this.lblDescricao, 1, 0);
             this.tblPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel3.Location = new System.Drawing.Point(4, 194);
-            this.tblPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanel3.Name = "tblPanel3";
             this.tblPanel3.RowCount = 2;
             this.tblPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -203,7 +203,7 @@
             this.txtDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtDescricao.Location = new System.Drawing.Point(57, 22);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(930, 107);
@@ -231,7 +231,7 @@
             this.tblPanel2.Controls.Add(this.lblNomeProduto, 1, 0);
             this.tblPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel2.Location = new System.Drawing.Point(4, 111);
-            this.tblPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanel2.Name = "tblPanel2";
             this.tblPanel2.RowCount = 2;
             this.tblPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -244,7 +244,7 @@
             this.txtNomeProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNomeProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtNomeProduto.Location = new System.Drawing.Point(57, 34);
-            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(930, 27);
             this.txtNomeProduto.TabIndex = 35;
@@ -275,7 +275,7 @@
             this.tblPanel1.Controls.Add(this.lblPreco, 3, 0);
             this.tblPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel1.Location = new System.Drawing.Point(4, 29);
-            this.tblPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanel1.Name = "tblPanel1";
             this.tblPanel1.RowCount = 2;
             this.tblPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -288,7 +288,7 @@
             this.mtbIdProduto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtbIdProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mtbIdProduto.Location = new System.Drawing.Point(57, 33);
-            this.mtbIdProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbIdProduto.Margin = new System.Windows.Forms.Padding(4);
             this.mtbIdProduto.Name = "mtbIdProduto";
             this.mtbIdProduto.Size = new System.Drawing.Size(444, 27);
             this.mtbIdProduto.TabIndex = 33;
@@ -298,7 +298,7 @@
             this.mtbPreco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtbPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mtbPreco.Location = new System.Drawing.Point(540, 33);
-            this.mtbPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbPreco.Margin = new System.Windows.Forms.Padding(4);
             this.mtbPreco.Name = "mtbPreco";
             this.mtbPreco.Size = new System.Drawing.Size(444, 27);
             this.mtbPreco.TabIndex = 32;
@@ -337,7 +337,7 @@
             this.tblPanel4.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tblPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel4.Location = new System.Drawing.Point(4, 347);
-            this.tblPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanel4.Name = "tblPanel4";
             this.tblPanel4.RowCount = 1;
             this.tblPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -352,7 +352,7 @@
             this.tableLayoutPanel5.Controls.Add(this.lblTempoPreparo, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(564, 4);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -365,7 +365,7 @@
             this.mtbTempoPreparo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtbTempoPreparo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mtbTempoPreparo.Location = new System.Drawing.Point(4, 36);
-            this.mtbTempoPreparo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbTempoPreparo.Margin = new System.Windows.Forms.Padding(4);
             this.mtbTempoPreparo.Mask = "00:00";
             this.mtbTempoPreparo.Name = "mtbTempoPreparo";
             this.mtbTempoPreparo.Size = new System.Drawing.Size(415, 27);
@@ -413,7 +413,7 @@
             // 
             this.cbxAtivoInativo.FormattingEnabled = true;
             this.cbxAtivoInativo.Location = new System.Drawing.Point(4, 30);
-            this.cbxAtivoInativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxAtivoInativo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAtivoInativo.Name = "cbxAtivoInativo";
             this.cbxAtivoInativo.Size = new System.Drawing.Size(369, 28);
             this.cbxAtivoInativo.TabIndex = 37;
@@ -422,9 +422,9 @@
             // 
             this.tabConsultaProdutos.Controls.Add(this.tblPanelBase);
             this.tabConsultaProdutos.Location = new System.Drawing.Point(4, 25);
-            this.tabConsultaProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabConsultaProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.tabConsultaProdutos.Name = "tabConsultaProdutos";
-            this.tabConsultaProdutos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabConsultaProdutos.Padding = new System.Windows.Forms.Padding(4);
             this.tabConsultaProdutos.Size = new System.Drawing.Size(1060, 527);
             this.tabConsultaProdutos.TabIndex = 1;
             this.tabConsultaProdutos.Text = "Consulta Produtos";
@@ -442,7 +442,7 @@
             this.tblPanelBase.Controls.Add(this.lstListaProdutos, 1, 2);
             this.tblPanelBase.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tblPanelBase.Location = new System.Drawing.Point(-31, 0);
-            this.tblPanelBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblPanelBase.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanelBase.Name = "tblPanelBase";
             this.tblPanelBase.RowCount = 4;
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
@@ -457,7 +457,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnExcluir.Location = new System.Drawing.Point(57, 481);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(1004, 30);
             this.btnExcluir.TabIndex = 5;
@@ -471,7 +471,7 @@
             this.lstListaProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lstListaProdutos.HideSelection = false;
             this.lstListaProdutos.Location = new System.Drawing.Point(57, 102);
-            this.lstListaProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstListaProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.lstListaProdutos.Name = "lstListaProdutos";
             this.lstListaProdutos.Size = new System.Drawing.Size(1003, 352);
             this.lstListaProdutos.TabIndex = 1;
@@ -482,12 +482,12 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtBuscar, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblBuscar, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(57, 16);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.66667F));
@@ -500,7 +500,7 @@
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnBuscar.Location = new System.Drawing.Point(871, 28);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(129, 28);
             this.btnBuscar.TabIndex = 6;
@@ -512,7 +512,7 @@
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtBuscar.Location = new System.Drawing.Point(4, 28);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(793, 22);
             this.txtBuscar.TabIndex = 5;
@@ -538,7 +538,7 @@
             this.Controls.Add(this.tabControlProdutos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Produtos";

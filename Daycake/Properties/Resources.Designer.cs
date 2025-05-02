@@ -73,6 +73,16 @@ namespace Daycake.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Doce_ii {
+            get {
+                object obj = ResourceManager.GetObject("Fundo Doce ii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fundo_login {
             get {
                 object obj = ResourceManager.GetObject("Fundo login", resourceCulture);

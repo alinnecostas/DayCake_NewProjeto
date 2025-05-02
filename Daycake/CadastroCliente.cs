@@ -15,7 +15,7 @@ namespace Daycake
     public partial class CadastroConsultaClientes : Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;database=daycake";
+        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=daycake";
         public int? id_cliente_selecionado = null;
 
         public CadastroConsultaClientes()

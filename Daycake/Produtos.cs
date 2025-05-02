@@ -15,7 +15,7 @@ namespace Daycake
     public partial class Produtos : Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=1007;database=daycake";
+        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=daycake";
         public int? id_produto_selecionado = null;
 
         public Produtos()

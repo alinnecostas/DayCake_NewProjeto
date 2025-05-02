@@ -50,7 +50,7 @@
             this.mnsCadastro});
             this.mnsCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsCliente.Name = "mnsCliente";
-            this.mnsCliente.Size = new System.Drawing.Size(56, 20);
+            this.mnsCliente.Size = new System.Drawing.Size(69, 24);
             this.mnsCliente.Text = "Cliente";
             // 
             // mnsCadastro
@@ -58,7 +58,7 @@
             this.mnsCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsCadastro.Name = "mnsCadastro";
-            this.mnsCadastro.Size = new System.Drawing.Size(121, 22);
+            this.mnsCadastro.Size = new System.Drawing.Size(151, 26);
             this.mnsCadastro.Text = "Cadastro";
             this.mnsCadastro.Click += new System.EventHandler(this.mnsCadastro_Click);
             // 
@@ -69,7 +69,7 @@
             this.mnsRecebimentos});
             this.mnsPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsPedidos.Name = "mnsPedidos";
-            this.mnsPedidos.Size = new System.Drawing.Size(61, 20);
+            this.mnsPedidos.Size = new System.Drawing.Size(75, 24);
             this.mnsPedidos.Text = "Pedidos";
             // 
             // mnsAgendarPedido
@@ -77,7 +77,7 @@
             this.mnsAgendarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsAgendarPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsAgendarPedido.Name = "mnsAgendarPedido";
-            this.mnsAgendarPedido.Size = new System.Drawing.Size(159, 22);
+            this.mnsAgendarPedido.Size = new System.Drawing.Size(199, 26);
             this.mnsAgendarPedido.Text = "Agendar Pedido";
             this.mnsAgendarPedido.Click += new System.EventHandler(this.mnsAgendarPedido_Click);
             // 
@@ -86,7 +86,7 @@
             this.mnsRecebimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsRecebimentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsRecebimentos.Name = "mnsRecebimentos";
-            this.mnsRecebimentos.Size = new System.Drawing.Size(159, 22);
+            this.mnsRecebimentos.Size = new System.Drawing.Size(199, 26);
             this.mnsRecebimentos.Text = "Recebimentos";
             this.mnsRecebimentos.Click += new System.EventHandler(this.mnsRecebimentos_Click_1);
             // 
@@ -96,7 +96,7 @@
             this.mnsAdicionarProduto});
             this.mnsProducao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsProducao.Name = "mnsProducao";
-            this.mnsProducao.Size = new System.Drawing.Size(70, 20);
+            this.mnsProducao.Size = new System.Drawing.Size(86, 24);
             this.mnsProducao.Text = "Produção";
             // 
             // mnsAdicionarProduto
@@ -104,7 +104,7 @@
             this.mnsAdicionarProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.mnsAdicionarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
             this.mnsAdicionarProduto.Name = "mnsAdicionarProduto";
-            this.mnsAdicionarProduto.Size = new System.Drawing.Size(171, 22);
+            this.mnsAdicionarProduto.Size = new System.Drawing.Size(213, 26);
             this.mnsAdicionarProduto.Text = "Adicionar Produto";
             this.mnsAdicionarProduto.Click += new System.EventHandler(this.mnsAdicionarProduto_Click);
             // 
@@ -112,13 +112,13 @@
             // 
             this.mnsSair.ForeColor = System.Drawing.Color.IndianRed;
             this.mnsSair.Name = "mnsSair";
-            this.mnsSair.Size = new System.Drawing.Size(38, 20);
+            this.mnsSair.Size = new System.Drawing.Size(48, 24);
             this.mnsSair.Text = "Sair";
             this.mnsSair.Click += new System.EventHandler(this.mnsSair_Click);
             // 
             // mnsMenu
             // 
-            this.mnsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
+            this.mnsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.mnsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mnsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -129,7 +129,7 @@
             this.mnsSair});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(811, 24);
+            this.mnsMenu.Size = new System.Drawing.Size(811, 28);
             this.mnsMenu.TabIndex = 0;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -137,30 +137,31 @@
             // 
             this.statusToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
-            this.statusToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.statusToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.statusToolStripMenuItem.Text = "Status";
             this.statusToolStripMenuItem.Click += new System.EventHandler(this.statusToolStripMenuItem_Click);
             // 
             // picMenu
             // 
-            this.picMenu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.picMenu.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login__1_;
+            this.picMenu.BackColor = System.Drawing.Color.MistyRose;
+            this.picMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMenu.BackgroundImage")));
             this.picMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.picMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picMenu.InitialImage = global::Daycake.Properties.Resources.Daycake;
-            this.picMenu.Location = new System.Drawing.Point(0, 24);
+            this.picMenu.Location = new System.Drawing.Point(0, 28);
             this.picMenu.Name = "picMenu";
-            this.picMenu.Size = new System.Drawing.Size(811, 485);
+            this.picMenu.Size = new System.Drawing.Size(811, 481);
             this.picMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picMenu.TabIndex = 1;
             this.picMenu.TabStop = false;
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(811, 509);
             this.Controls.Add(this.picMenu);
             this.Controls.Add(this.mnsMenu);

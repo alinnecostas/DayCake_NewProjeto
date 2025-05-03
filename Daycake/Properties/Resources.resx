@@ -121,23 +121,32 @@
   <data name="senha-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\senha-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fundo login (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo login (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fundo login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fundo Doce ii" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Doce ii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fundo login (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo login (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dbk 3.2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dbk 3.2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Design 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Daycake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Daycake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dbk 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dbk 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoPag 31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoPag 3.11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fundo Doce 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Doce 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +154,22 @@
   <data name="FundoDegrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FundoDegrade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fundo login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoDK 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoDK 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoPag 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoPag 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fundo Doce iiii" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fundo Doce iiii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoPag 3.1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoPag 3.1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoPag 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FundoPag 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -79,6 +79,9 @@ namespace Daycake
             this.Bounds = Screen.PrimaryScreen.WorkingArea;
         }
 
+        private void mnsMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
     }
 }

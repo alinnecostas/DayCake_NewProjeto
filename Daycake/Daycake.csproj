@@ -200,25 +200,28 @@
     <None Include="Resources\senha-de-usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo login.png" />
+    <None Include="Resources\Design 5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FundoDegrade.png" />
+    <None Include="Resources\FundoDK 2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo login1.png" />
+    <None Include="Resources\Dbk 3.2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo login %281%29.png" />
+    <None Include="Resources\FundoPag 3.1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Doce ii.png" />
+    <None Include="Resources\FundoPag 3.11.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Doce 2.png" />
+    <None Include="Resources\FundoPag 2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Fundo Doce iiii.png" />
+    <None Include="Resources\Dbk 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoPag 21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

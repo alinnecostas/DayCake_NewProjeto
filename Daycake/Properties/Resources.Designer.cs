@@ -73,6 +73,36 @@ namespace Daycake.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dbk_3_2 {
+            get {
+                object obj = ResourceManager.GetObject("Dbk 3.2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dbk_5 {
+            get {
+                object obj = ResourceManager.GetObject("Dbk 5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Design_5 {
+            get {
+                object obj = ResourceManager.GetObject("Design 5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fundo_Doce_2 {
             get {
                 object obj = ResourceManager.GetObject("Fundo Doce 2", resourceCulture);
@@ -136,6 +166,56 @@ namespace Daycake.Properties {
         internal static System.Drawing.Bitmap FundoDegrade {
             get {
                 object obj = ResourceManager.GetObject("FundoDegrade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoDK_2 {
+            get {
+                object obj = ResourceManager.GetObject("FundoDK 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPag_2 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPag 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPag_21 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPag 21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPag_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPag 3.1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPag_31 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPag 31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

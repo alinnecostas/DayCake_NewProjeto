@@ -102,7 +102,7 @@
             // tblPanelBaseProduto
             // 
             this.tblPanelBaseProduto.BackColor = System.Drawing.Color.Transparent;
-            this.tblPanelBaseProduto.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login;
+            this.tblPanelBaseProduto.BackgroundImage = global::Daycake.Properties.Resources.FundoPag_21;
             this.tblPanelBaseProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tblPanelBaseProduto.ColumnCount = 1;
             this.tblPanelBaseProduto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -212,7 +212,7 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblDescricao.ForeColor = System.Drawing.Color.Black;
             this.lblDescricao.Location = new System.Drawing.Point(57, 0);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescricao.Name = "lblDescricao";
@@ -252,7 +252,7 @@
             // lblNomeProduto
             // 
             this.lblNomeProduto.AutoSize = true;
-            this.lblNomeProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblNomeProduto.ForeColor = System.Drawing.Color.Black;
             this.lblNomeProduto.Location = new System.Drawing.Point(57, 0);
             this.lblNomeProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeProduto.Name = "lblNomeProduto";
@@ -306,7 +306,7 @@
             // lblIdProduto
             // 
             this.lblIdProduto.AutoSize = true;
-            this.lblIdProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblIdProduto.ForeColor = System.Drawing.Color.Black;
             this.lblIdProduto.Location = new System.Drawing.Point(57, 0);
             this.lblIdProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdProduto.Name = "lblIdProduto";
@@ -317,7 +317,7 @@
             // lblPreco
             // 
             this.lblPreco.AutoSize = true;
-            this.lblPreco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblPreco.ForeColor = System.Drawing.Color.Black;
             this.lblPreco.Location = new System.Drawing.Point(540, 0);
             this.lblPreco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreco.Name = "lblPreco";
@@ -375,7 +375,7 @@
             // lblTempoPreparo
             // 
             this.lblTempoPreparo.AutoSize = true;
-            this.lblTempoPreparo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblTempoPreparo.ForeColor = System.Drawing.Color.Black;
             this.lblTempoPreparo.Location = new System.Drawing.Point(4, 0);
             this.lblTempoPreparo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTempoPreparo.Name = "lblTempoPreparo";
@@ -401,7 +401,7 @@
             // lblAtivoInativo
             // 
             this.lblAtivoInativo.AutoSize = true;
-            this.lblAtivoInativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblAtivoInativo.ForeColor = System.Drawing.Color.Black;
             this.lblAtivoInativo.Location = new System.Drawing.Point(4, 0);
             this.lblAtivoInativo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAtivoInativo.Name = "lblAtivoInativo";
@@ -432,7 +432,7 @@
             // 
             // tblPanelBase
             // 
-            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login1;
+            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.FundoPag_21;
             this.tblPanelBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tblPanelBase.ColumnCount = 3;
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
@@ -455,7 +455,7 @@
             // btnExcluir
             // 
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
             this.btnExcluir.Location = new System.Drawing.Point(57, 481);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
@@ -482,7 +482,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel3.Controls.Add(this.btnBuscar, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtBuscar, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblBuscar, 0, 0);
@@ -514,13 +514,13 @@
             this.txtBuscar.Location = new System.Drawing.Point(4, 28);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(793, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(792, 22);
             this.txtBuscar.TabIndex = 5;
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblBuscar.ForeColor = System.Drawing.Color.Black;
             this.lblBuscar.Location = new System.Drawing.Point(4, 0);
             this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";

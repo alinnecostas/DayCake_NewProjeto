@@ -86,7 +86,7 @@
             // 
             // tblPanelBase
             // 
-            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.Fundo_Doce_2;
+            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.FundoPag_21;
             this.tblPanelBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tblPanelBase.ColumnCount = 3;
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -99,8 +99,8 @@
             this.tblPanelBase.Margin = new System.Windows.Forms.Padding(4);
             this.tblPanelBase.Name = "tblPanelBase";
             this.tblPanelBase.RowCount = 4;
-            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tblPanelBase.Size = new System.Drawing.Size(1069, 523);
@@ -141,14 +141,14 @@
             this.tableLayoutPanel1.Controls.Add(this.lblFiltre, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(44, 14);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(44, 15);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(981, 135);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(981, 134);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // btnFiltrar
@@ -156,8 +156,8 @@
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnFiltrar.Location = new System.Drawing.Point(4, 107);
+            this.btnFiltrar.ForeColor = System.Drawing.Color.Black;
+            this.btnFiltrar.Location = new System.Drawing.Point(4, 106);
             this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(973, 24);
@@ -171,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltre.AutoSize = true;
             this.lblFiltre.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltre.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblFiltre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.lblFiltre.Location = new System.Drawing.Point(5, 0);
             this.lblFiltre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFiltre.Name = "lblFiltre";
@@ -194,7 +194,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lblStatus, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblDataPedido, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 44);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 43);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -215,7 +215,7 @@
             // lblDataEntrega
             // 
             this.lblDataEntrega.AutoSize = true;
-            this.lblDataEntrega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblDataEntrega.ForeColor = System.Drawing.Color.Black;
             this.lblDataEntrega.Location = new System.Drawing.Point(317, 0);
             this.lblDataEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataEntrega.Name = "lblDataEntrega";
@@ -225,11 +225,12 @@
             // 
             // cbxStatus
             // 
+            this.cbxStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Location = new System.Drawing.Point(629, 29);
             this.cbxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(312, 24);
+            this.cbxStatus.Size = new System.Drawing.Size(425, 24);
             this.cbxStatus.TabIndex = 14;
             // 
             // dtpDatapedido
@@ -243,7 +244,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(629, 0);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
@@ -254,7 +255,7 @@
             // lblDataPedido
             // 
             this.lblDataPedido.AutoSize = true;
-            this.lblDataPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblDataPedido.ForeColor = System.Drawing.Color.Black;
             this.lblDataPedido.Location = new System.Drawing.Point(4, 0);
             this.lblDataPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataPedido.Name = "lblDataPedido";

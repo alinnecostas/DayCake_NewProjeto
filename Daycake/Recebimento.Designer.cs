@@ -51,7 +51,7 @@
             // 
             // tblPanelBase
             // 
-            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.Fundo_login1;
+            this.tblPanelBase.BackgroundImage = global::Daycake.Properties.Resources.FundoPag_21;
             this.tblPanelBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tblPanelBase.ColumnCount = 3;
             this.tblPanelBase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -121,7 +121,7 @@
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.Black;
             this.btnFiltrar.Location = new System.Drawing.Point(4, 89);
             this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
@@ -147,7 +147,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
             this.tableLayoutPanel2.Controls.Add(this.cbxStatus, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.dtpDatapedido, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.mtbIdcliente, 1, 1);
@@ -157,13 +157,13 @@
             this.tableLayoutPanel2.Controls.Add(this.lblIdCliente, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblIdPedido, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 30);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 24);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1219, 71);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(975, 57);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // cbxStatus
@@ -202,7 +202,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(703, 0);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
@@ -213,7 +213,7 @@
             // lblDataPedido
             // 
             this.lblDataPedido.AutoSize = true;
-            this.lblDataPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblDataPedido.ForeColor = System.Drawing.Color.Black;
             this.lblDataPedido.Location = new System.Drawing.Point(470, 0);
             this.lblDataPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataPedido.Name = "lblDataPedido";
@@ -224,7 +224,7 @@
             // lblIdCliente
             // 
             this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblIdCliente.ForeColor = System.Drawing.Color.Black;
             this.lblIdCliente.Location = new System.Drawing.Point(237, 0);
             this.lblIdCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdCliente.Name = "lblIdCliente";
@@ -235,7 +235,7 @@
             // lblIdPedido
             // 
             this.lblIdPedido.AutoSize = true;
-            this.lblIdPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.lblIdPedido.ForeColor = System.Drawing.Color.Black;
             this.lblIdPedido.Location = new System.Drawing.Point(4, 0);
             this.lblIdPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdPedido.Name = "lblIdPedido";

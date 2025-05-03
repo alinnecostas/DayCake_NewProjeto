@@ -12,6 +12,8 @@ namespace Daycake
             InitializeComponent();
             btnAcessar.Click += new EventHandler(btnAcessar_Click); // Conectar evento ao botão  
             btnAcessar.Paint += new PaintEventHandler(btnAcessar_Paint); // Conectar evento Paint ao botão  
+            RoundedTextBox txtLogin = new RoundedTextBox();
+            RoundedTextBox txtSenha = new RoundedTextBox();
         }
 
         private void btnAcessar_Click(object sender, EventArgs e)
@@ -60,21 +62,90 @@ namespace Daycake
             }
         }
 
-        private void btnAcessar_Click_1(object sender, EventArgs e)
+        public class RoundedTextBox : UserControl
         {
-            //depois de abrir o menu, sem usar o hide:
+            private TextBox textBox = new TextBox();
+            private int cornerRadius = 15;
+            private Color borderColor = Color.FromArgb(255, 235, 223); // mesma do botão
+            private Color backColorCustom = Color.FromArgb(141, 98, 98); // mesma do botão
+            private Color foreColorCustom = Color.FromArgb(255, 235, 223); // texto igual ao botão
 
-            FormMenu menu = new FormMenu();
+            public RoundedTextBox()
+            {
+                this.DoubleBuffered = true;
+                textBox.BorderStyle = BorderStyle.None;
+                textBox.BackColor = backColorCustom;
+                textBox.ForeColor = foreColorCustom;
+                textBox.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+                textBox.Location = new Point(10, 7);
+                textBox.Width = this.Width - 20;
+                textBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+                textBox.TextAlign = HorizontalAlignment.Left;
+                this.Controls.Add(textBox);
+                this.BackColor = Color.Transparent;
+                this.Padding = new Padding(10);
+                this.Resize += RoundedTextBox_Resize;
+            }
+
+            private void RoundedTextBox_Resize(object sender, EventArgs e)
+            {
+                textBox.Width = this.Width - 20;
+                textBox.Height = this.Height - 14;
+            }
+
+            public override string Text
+            {
+                get { return textBox.Text; }
+                set { textBox.Text = value; }
+            }
+
+            public bool UseSystemPasswordChar
+            {
+                get { return textBox.UseSystemPasswordChar; }
+                set { textBox.UseSystemPasswordChar = value; }
+            }
+
+            protected override void OnPaint(PaintEventArgs e)
+            {
+                base.OnPaint(e);
+                Graphics g = e.Graphics;
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+
+                GraphicsPath path = new GraphicsPath();
+                Rectangle rect = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+
+                path.AddArc(rect.X, rect.Y, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(rect.Right - cornerRadius, rect.Y, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(rect.Right - cornerRadius, rect.Bottom - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(rect.X, rect.Bottom - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                using (SolidBrush brush = new SolidBrush(backColorCustom))
+                {
+                    g.FillPath(brush, path);
+                }
+                using (Pen pen = new Pen(borderColor, 1))
+                {
+                    g.DrawPath(pen, path);
+                }
+            }
+
+            private void btnAcessar_Click_1(object sender, EventArgs e)
+            {
+                //depois de abrir o menu, sem usar o hide:
+
+                FormMenu menu = new FormMenu();
 
 
+            }
+
+            private void Login_Load(object sender, EventArgs e)
+            {
+
+            }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-
 }
 
 

@@ -230,7 +230,7 @@
             this.cbxStatus.Location = new System.Drawing.Point(629, 29);
             this.cbxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(425, 24);
+            this.cbxStatus.Size = new System.Drawing.Size(340, 24);
             this.cbxStatus.TabIndex = 14;
             // 
             // dtpDatapedido

@@ -46,11 +46,10 @@ namespace Daycake
 
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = @"SELECT idCliente, nome, telefone, email, endereco, numero, bairro, data_cadastro 
-                FROM Cliente 
-                WHERE nome LIKE @termo 
-                OR email LIKE @termo 
-                OR telefone LIKE @termo";
+                string sql = "SELECT * FROM cliente " +
+                             "WHERE nome LIKE @termo OR telefone LIKE @termo OR email LIKE @termo " +
+                             "OR endereco LIKE @termo OR numero LIKE @termo OR bairro LIKE @termo " +
+                             "ORDER BY idCliente ASC";
 
                 Conexao.Open();
 
@@ -369,6 +368,11 @@ namespace Daycake
                 if (Conexao != null)
                     Conexao.Close();
             }
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
 
         }
     }

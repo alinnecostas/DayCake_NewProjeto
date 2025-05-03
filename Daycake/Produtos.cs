@@ -32,32 +32,30 @@ namespace Daycake
             lstListaProdutos.Columns.Add("Preço", 100);
             lstListaProdutos.Columns.Add("Tempo de Preparo", 100);
             lstListaProdutos.Columns.Add("Status", 30);
+
+            carregar_produtos();
         }
 
         private void btnAdicionarProduto_Click(object sender, EventArgs e)
         {
             try
             {
-                // Criar a conexão com o MySQL
                 Conexao = new MySqlConnection(data_source);
                 Conexao.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = Conexao;
 
-                // Habilitando o Update para o meu botão salvar
 
                 if (id_produto_selecionado == null)
                 {
-                    // insert
-                    cmd.Parameters.Clear(); // limpa os parâmetros antigos
+                    cmd.Parameters.Clear();
                     cmd.CommandText =
                         "INSERT INTO produto " +
-                        "(idProduto, nomeProduto, descricao, preco, tempo_preparo, status) " +
+                        "(nome, descricao, preco, tempo_preparo, status) " +
                         "VALUES " +
-                        "(@idProduto, @nomeProduto, @descricao, @preco, @tempo_preparo, @status)";
+                        "(@nome, @descricao, @preco, @tempo_preparo, @status)";
 
-                    cmd.Parameters.AddWithValue("@idProduto", mtbIdProduto.Text);
-                    cmd.Parameters.AddWithValue("@nomeProduto", txtNomeProduto.Text);
+                    cmd.Parameters.AddWithValue("@nome", txtNomeProduto.Text);
                     cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
                     cmd.Parameters.AddWithValue("@preco", mtbPreco.Text);
                     cmd.Parameters.AddWithValue("@tempo_preparo", mtbTempoPreparo.Text);
@@ -74,10 +72,9 @@ namespace Daycake
                     cmd.Parameters.Clear(); // limpa os parâmetros antigos
                     cmd.CommandText =
                         "UPDATE produto " +
-                        "SET idProduto = @idProduto, nomeProduto = @nomeProduto, descricao = @descricao, preco = @preco, tempo_preparo = @tempo_preparo, status = @status " +
+                        "SET nome = @nome, descricao = @descricao, preco = @preco, tempo_preparo = @tempo_preparo, status = @status " +
                         "WHERE idProduto = @idProduto";
 
-                    cmd.Parameters.AddWithValue("@idProduto", mtbIdProduto.Text);
                     cmd.Parameters.AddWithValue("@nomeProduto", txtNomeProduto.Text);
                     cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
                     cmd.Parameters.AddWithValue("@preco", mtbPreco.Text);
@@ -112,39 +109,56 @@ namespace Daycake
         {
             try
             {
+                string termoBusca = "%" + txtBuscar.Text + "%";
+
+                Conexao = new MySqlConnection(data_source);
+
+                string sql = @"SELECT idProduto, nome, descricao, preco, tempo_preparo, status
+                FROM Produto 
+                WHERE nome LIKE @termo 
+                OR preco LIKE @termo 
+                OR status LIKE @termo";
+
                 Conexao.Open();
 
-                string sql = "SELECT * FROM Produto";
-
                 MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+                cmd.Parameters.AddWithValue("@termo", termoBusca);
+
                 MySqlDataReader reader = cmd.ExecuteReader();
+
+                lstListaProdutos.Items.Clear();
 
                 while (reader.Read())
                 {
-                    string[] row =
-                    {
-                        reader.GetInt32(0).ToString(), //id produto
-                        reader.GetString(1), // nome produto
-                        reader.GetString(2), // descrição
-                        reader.GetDecimal(3).ToString(), // preço
-                        reader.GetString(4), // tempo preparo
-                        reader.GetString(5), // status
-                       };
-                    var linha_list_view = new ListViewItem(row);
-                    lstListaProdutos.Items.Add(linha_list_view);
-                }
+                    string[] row = new string[8];
 
+                    row[0] = reader.GetInt32(0).ToString();      // idProduto
+                    row[1] = reader.GetString(1);                // nome
+                    row[2] = reader.GetString(2);                // descricao
+                    row[3] = reader.GetString(3);                // preço
+                    row[4] = reader.GetString(4);                // tempo preparo
+                    row[5] = reader.GetString(5);                // status
+
+                    lstListaProdutos.Items.Add(new ListViewItem(row));
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erro na busca: " + ex.Message, "Erro",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                Conexao.Close();
+                if (Conexao?.State == ConnectionState.Open)
+                    Conexao.Close();
             }
+
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            excluir_produto();
+        }
 
         private void carregar_produtos()
         {
@@ -152,7 +166,7 @@ namespace Daycake
             {
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "SELECT * FROM contato ORDER BY id ASC";
+                string sql = "SELECT * FROM Produto ORDER BY idProduto ASC";
 
                 Conexao.Open();
 
@@ -189,7 +203,7 @@ namespace Daycake
                 Conexao.Close();
             }
         }
-
+             
         private void zerar_Forms()
         {
             id_produto_selecionado = null;
@@ -197,7 +211,7 @@ namespace Daycake
             txtDescricao.Text = "";
             mtbPreco.Text = null;
             mtbTempoPreparo.Text = null;
-            cbxAtivoInativo.SelectedIndex = 0;
+            cbxAtivoInativo.Text = "";
             txtNomeProduto.Focus();
         }
 
@@ -206,29 +220,27 @@ namespace Daycake
             try
             {
 
-                DialogResult conf = MessageBox.Show("Deseja Excluir o Registro com ?",
+                DialogResult conf = MessageBox.Show("Deseja Excluir o Registro?",
                                                     "Certeza ?",
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Warning);
 
                 if (conf == DialogResult.Yes)
                 {
-
-
                     Conexao = new MySqlConnection(data_source);
                     Conexao.Open();
                     MySqlCommand cmd = new MySqlCommand();
                     cmd.Connection = Conexao;
 
                     cmd.Connection = Conexao;
-                    cmd.CommandText = "DELETE FROM contato WHERE id=@id";
+                    cmd.CommandText = "DELETE FROM produto WHERE idProduto=@id";
                     cmd.Parameters.AddWithValue("@id", id_produto_selecionado);
 
                     cmd.ExecuteNonQuery();
 
 
                     MessageBox.Show(
-                            "Contato Excluido com Sucesso!",
+                            "Produto Excluido com Sucesso!",
                             "Sucesso", MessageBoxButtons.OK,
                             MessageBoxIcon.Information
                             );
@@ -258,9 +270,22 @@ namespace Daycake
             }
         }
 
-        private void btnExcluir_Click_1(object sender, EventArgs e)
+        private void lstListaProdutos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            excluir_produto();
+            ListView.SelectedListViewItemCollection itens_selecionados = lstListaProdutos.SelectedItems;
+
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+                id_produto_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+                txtNomeProduto.Text = item.SubItems[1].Text;
+                txtDescricao.Text = item.SubItems[2].Text;
+                mtbPreco.Text = item.SubItems[3].Text;
+                mtbTempoPreparo.Text = item.SubItems[4].Text;
+                cbxAtivoInativo.Text = item.SubItems[5].Text;
+            }
+
+            btnExcluir.Visible = true;
         }
     }
 }

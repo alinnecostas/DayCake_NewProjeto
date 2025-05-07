@@ -57,7 +57,18 @@ namespace Daycake
 
                     cmd.Parameters.AddWithValue("@nome", txtNomeProduto.Text);
                     cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                    cmd.Parameters.AddWithValue("@preco", mtbPreco.Text);
+                    
+                    decimal precoDecimal;
+
+                    if (!decimal.TryParse(mtbPreco.Text.Replace(',', '.'), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out precoDecimal))
+                    {
+                        MessageBox.Show("Preço inválido. Digite um valor numérico, como 12.50.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string precoFormatado = precoDecimal.ToString("F2", System.Globalization.CultureInfo.InvariantCulture);
+                    cmd.Parameters.AddWithValue("@preco", precoFormatado);
+
                     cmd.Parameters.AddWithValue("@tempo_preparo", mtbTempoPreparo.Text);
                     cmd.Parameters.AddWithValue("@status", cbxAtivoInativo.Text);
 

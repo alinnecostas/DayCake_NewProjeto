@@ -15,7 +15,7 @@ namespace Daycake
     public partial class CadastroConsultaClientes : Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=adminADMIN;database=daycake";
+        private string data_source = "datasource=localhost;username=root;password=;database=daycake";
         public int? id_cliente_selecionado = null;
 
         public CadastroConsultaClientes()
@@ -70,7 +70,7 @@ namespace Daycake
                     row[3] = reader.GetString(3);                // email
                     row[4] = reader.GetString(4);                // endereco
                     row[5] = reader.GetString(5);                // bairro
-                    row[6] = reader.GetString(6);                   // número
+                    row[6] = reader.GetString(6);               // número
                     row[7] = reader.GetString(7);               // data_cadastro
 
 

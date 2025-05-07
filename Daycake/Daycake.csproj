@@ -107,6 +107,7 @@
     <Compile Include="CadastroCliente.Designer.cs">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClienteItem.cs" />
     <Compile Include="Login%28Layout%29.cs">
       <SubType>Form</SubType>
     </Compile>

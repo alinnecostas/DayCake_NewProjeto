@@ -34,7 +34,7 @@
             this.tabPedidos = new System.Windows.Forms.TabPage();
             this.tblPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tblPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAtualizarCliente = new System.Windows.Forms.Button();
+            this.btnAtualizarPedido = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnFazerPedido = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,8 +60,8 @@
             this.tblPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.mtbIdCliente = new System.Windows.Forms.MaskedTextBox();
             this.lblIdCliente = new System.Windows.Forms.Label();
+            this.cbxNomeCliente = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -105,16 +105,15 @@
             this.tabControlPedidos.SelectedIndex = 0;
             this.tabControlPedidos.Size = new System.Drawing.Size(893, 461);
             this.tabControlPedidos.TabIndex = 0;
-            this.tabControlPedidos.Click += new System.EventHandler(this.excluirPedidosToolStripMenuItem_Click);
             // 
             // tabPedidos
             // 
             this.tabPedidos.BackColor = System.Drawing.Color.White;
             this.tabPedidos.Controls.Add(this.tblPanel5);
-            this.tabPedidos.Location = new System.Drawing.Point(4, 29);
+            this.tabPedidos.Location = new System.Drawing.Point(4, 24);
             this.tabPedidos.Name = "tabPedidos";
             this.tabPedidos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPedidos.Size = new System.Drawing.Size(885, 428);
+            this.tabPedidos.Size = new System.Drawing.Size(885, 433);
             this.tabPedidos.TabIndex = 0;
             this.tabPedidos.Text = "Pedidos";
             // 
@@ -158,8 +157,8 @@
             this.tblPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 3F));
             this.tblPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.1556F));
             this.tblPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.81278F));
-            this.tblPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tblPanel6.Controls.Add(this.btnAtualizarCliente, 3, 0);
+            this.tblPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tblPanel6.Controls.Add(this.btnAtualizarPedido, 3, 0);
             this.tblPanel6.Controls.Add(this.btnNovo, 1, 0);
             this.tblPanel6.Controls.Add(this.btnFazerPedido, 4, 0);
             this.tblPanel6.Location = new System.Drawing.Point(5, 381);
@@ -170,21 +169,21 @@
             this.tblPanel6.Size = new System.Drawing.Size(876, 34);
             this.tblPanel6.TabIndex = 41;
             // 
-            // btnAtualizarCliente
+            // btnAtualizarPedido
             // 
-            this.btnAtualizarCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAtualizarCliente.AutoSize = true;
-            this.btnAtualizarCliente.BackColor = System.Drawing.Color.White;
-            this.btnAtualizarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnAtualizarCliente.Location = new System.Drawing.Point(622, 4);
-            this.btnAtualizarCliente.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnAtualizarCliente.Name = "btnAtualizarCliente";
-            this.btnAtualizarCliente.Size = new System.Drawing.Size(80, 26);
-            this.btnAtualizarCliente.TabIndex = 41;
-            this.btnAtualizarCliente.Text = "Atualizar";
-            this.btnAtualizarCliente.UseVisualStyleBackColor = false;
-            this.btnAtualizarCliente.Click += new System.EventHandler(this.btnAtualizarCliente_Click);
+            this.btnAtualizarPedido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAtualizarPedido.AutoSize = true;
+            this.btnAtualizarPedido.BackColor = System.Drawing.Color.White;
+            this.btnAtualizarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnAtualizarPedido.Location = new System.Drawing.Point(613, 4);
+            this.btnAtualizarPedido.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnAtualizarPedido.Name = "btnAtualizarPedido";
+            this.btnAtualizarPedido.Size = new System.Drawing.Size(80, 26);
+            this.btnAtualizarPedido.TabIndex = 41;
+            this.btnAtualizarPedido.Text = "Atualizar";
+            this.btnAtualizarPedido.UseVisualStyleBackColor = false;
+            this.btnAtualizarPedido.Click += new System.EventHandler(this.btnAtualizarPedido_Click);
             // 
             // btnNovo
             // 
@@ -207,7 +206,7 @@
             this.btnFazerPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.btnFazerPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFazerPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(223)))));
-            this.btnFazerPedido.Location = new System.Drawing.Point(719, 4);
+            this.btnFazerPedido.Location = new System.Drawing.Point(709, 4);
             this.btnFazerPedido.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnFazerPedido.Name = "btnFazerPedido";
             this.btnFazerPedido.Size = new System.Drawing.Size(107, 26);
@@ -245,7 +244,7 @@
             this.lblTipoDoce.Location = new System.Drawing.Point(44, 0);
             this.lblTipoDoce.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoDoce.Name = "lblTipoDoce";
-            this.lblTipoDoce.Size = new System.Drawing.Size(100, 20);
+            this.lblTipoDoce.Size = new System.Drawing.Size(78, 15);
             this.lblTipoDoce.TabIndex = 35;
             this.lblTipoDoce.Text = "Tipo de doce:";
             // 
@@ -275,7 +274,6 @@
             this.lstTipoDoce.Size = new System.Drawing.Size(381, 97);
             this.lstTipoDoce.TabIndex = 40;
             this.lstTipoDoce.UseCompatibleStateImageBehavior = false;
-            this.lstTipoDoce.SelectedIndexChanged += new System.EventHandler(this.lstTipoDoce_SelectedIndexChanged);
             // 
             // tableLayoutPanel5
             // 
@@ -302,7 +300,7 @@
             this.cbxTipoDoce.Location = new System.Drawing.Point(4, 3);
             this.cbxTipoDoce.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbxTipoDoce.Name = "cbxTipoDoce";
-            this.cbxTipoDoce.Size = new System.Drawing.Size(381, 28);
+            this.cbxTipoDoce.Size = new System.Drawing.Size(381, 23);
             this.cbxTipoDoce.TabIndex = 39;
             this.cbxTipoDoce.SelectedIndexChanged += new System.EventHandler(this.cbxTipoDoce_SelectedIndexChanged);
             // 
@@ -346,7 +344,7 @@
             this.lblQuantidade.Location = new System.Drawing.Point(4, 0);
             this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(90, 20);
+            this.lblQuantidade.Size = new System.Drawing.Size(72, 15);
             this.lblQuantidade.TabIndex = 41;
             this.lblQuantidade.Text = "Quantidade:";
             this.lblQuantidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -358,7 +356,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(4, 30);
             this.txtQuantidade.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(123, 20);
+            this.txtQuantidade.Size = new System.Drawing.Size(123, 16);
             this.txtQuantidade.TabIndex = 40;
             // 
             // tableLayoutPanel2
@@ -392,7 +390,7 @@
             this.mtbDataEntrega.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbDataEntrega.Mask = "00/00/0000";
             this.mtbDataEntrega.Name = "mtbDataEntrega";
-            this.mtbDataEntrega.Size = new System.Drawing.Size(389, 20);
+            this.mtbDataEntrega.Size = new System.Drawing.Size(389, 16);
             this.mtbDataEntrega.TabIndex = 48;
             // 
             // lblDataEntrega
@@ -402,7 +400,7 @@
             this.lblDataEntrega.Location = new System.Drawing.Point(444, 0);
             this.lblDataEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(120, 19);
+            this.lblDataEntrega.Size = new System.Drawing.Size(93, 15);
             this.lblDataEntrega.TabIndex = 47;
             this.lblDataEntrega.Text = "Data de Entrega:";
             // 
@@ -414,7 +412,7 @@
             this.mtbDataPedido.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mtbDataPedido.Mask = "00/00/0000";
             this.mtbDataPedido.Name = "mtbDataPedido";
-            this.mtbDataPedido.Size = new System.Drawing.Size(389, 20);
+            this.mtbDataPedido.Size = new System.Drawing.Size(389, 16);
             this.mtbDataPedido.TabIndex = 46;
             // 
             // lblDataPedido
@@ -424,7 +422,7 @@
             this.lblDataPedido.Location = new System.Drawing.Point(44, 0);
             this.lblDataPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataPedido.Name = "lblDataPedido";
-            this.lblDataPedido.Size = new System.Drawing.Size(116, 19);
+            this.lblDataPedido.Size = new System.Drawing.Size(91, 15);
             this.lblDataPedido.TabIndex = 31;
             this.lblDataPedido.Text = "Data do Pedido:";
             // 
@@ -459,7 +457,7 @@
             this.cbxFormaPagamento.Location = new System.Drawing.Point(444, 21);
             this.cbxFormaPagamento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cbxFormaPagamento.Name = "cbxFormaPagamento";
-            this.cbxFormaPagamento.Size = new System.Drawing.Size(389, 28);
+            this.cbxFormaPagamento.Size = new System.Drawing.Size(389, 23);
             this.cbxFormaPagamento.TabIndex = 40;
             // 
             // label1
@@ -469,7 +467,7 @@
             this.label1.Location = new System.Drawing.Point(44, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 18);
+            this.label1.Size = new System.Drawing.Size(33, 15);
             this.label1.TabIndex = 38;
             this.label1.Text = "Valor";
             // 
@@ -481,7 +479,7 @@
             this.txtValor.Location = new System.Drawing.Point(44, 21);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(389, 20);
+            this.txtValor.Size = new System.Drawing.Size(389, 16);
             this.txtValor.TabIndex = 37;
             // 
             // lblFormaPagamento
@@ -491,7 +489,7 @@
             this.lblFormaPagamento.Location = new System.Drawing.Point(444, 0);
             this.lblFormaPagamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormaPagamento.Name = "lblFormaPagamento";
-            this.lblFormaPagamento.Size = new System.Drawing.Size(154, 18);
+            this.lblFormaPagamento.Size = new System.Drawing.Size(124, 15);
             this.lblFormaPagamento.TabIndex = 35;
             this.lblFormaPagamento.Text = "Forma de Pagamento:";
             // 
@@ -506,8 +504,8 @@
             this.tblPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tblPanel1.Controls.Add(this.cbxStatus, 3, 1);
             this.tblPanel1.Controls.Add(this.lblStatus, 3, 0);
-            this.tblPanel1.Controls.Add(this.mtbIdCliente, 1, 1);
             this.tblPanel1.Controls.Add(this.lblIdCliente, 1, 0);
+            this.tblPanel1.Controls.Add(this.cbxNomeCliente, 1, 1);
             this.tblPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel1.Location = new System.Drawing.Point(4, 3);
             this.tblPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -524,7 +522,7 @@
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Location = new System.Drawing.Point(443, 22);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(391, 28);
+            this.cbxStatus.Size = new System.Drawing.Size(391, 23);
             this.cbxStatus.TabIndex = 37;
             // 
             // lblStatus
@@ -533,20 +531,9 @@
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
             this.lblStatus.Location = new System.Drawing.Point(443, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(52, 19);
+            this.lblStatus.Size = new System.Drawing.Size(42, 15);
             this.lblStatus.TabIndex = 36;
             this.lblStatus.Text = "Status:";
-            // 
-            // mtbIdCliente
-            // 
-            this.mtbIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtbIdCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mtbIdCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.mtbIdCliente.Location = new System.Drawing.Point(44, 22);
-            this.mtbIdCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.mtbIdCliente.Name = "mtbIdCliente";
-            this.mtbIdCliente.Size = new System.Drawing.Size(389, 20);
-            this.mtbIdCliente.TabIndex = 35;
             // 
             // lblIdCliente
             // 
@@ -555,9 +542,21 @@
             this.lblIdCliente.Location = new System.Drawing.Point(44, 0);
             this.lblIdCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(77, 19);
+            this.lblIdCliente.Size = new System.Drawing.Size(100, 15);
             this.lblIdCliente.TabIndex = 34;
-            this.lblIdCliente.Text = "ID Cliente:";
+            this.lblIdCliente.Text = "Nome do Cliente:";
+            // 
+            // cbxNomeCliente
+            // 
+            this.cbxNomeCliente.FormattingEnabled = true;
+            this.cbxNomeCliente.Location = new System.Drawing.Point(43, 22);
+            this.cbxNomeCliente.Name = "cbxNomeCliente";
+            this.cbxNomeCliente.Size = new System.Drawing.Size(387, 23);
+            this.cbxNomeCliente.TabIndex = 38;
+            this.cbxNomeCliente.SelectedIndexChanged += new System.EventHandler(this.cbxNomeCliente_SelectedIndexChanged);
+            this.cbxNomeCliente.TextChanged += new System.EventHandler(this.cbxNomeCliente_TextChanged);
+            this.cbxNomeCliente.Enter += new System.EventHandler(this.cbxNomeCliente_Enter_1);
+            this.cbxNomeCliente.Leave += new System.EventHandler(this.cbxNomeCliente_Leave_1);
             // 
             // tableLayoutPanel6
             // 
@@ -584,7 +583,7 @@
             this.label2.Location = new System.Drawing.Point(44, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(61, 15);
             this.label2.TabIndex = 36;
             this.label2.Text = "Descrição:";
             // 
@@ -603,10 +602,10 @@
             // tabConsultarPedidos
             // 
             this.tabConsultarPedidos.Controls.Add(this.tblPanelBase);
-            this.tabConsultarPedidos.Location = new System.Drawing.Point(4, 29);
+            this.tabConsultarPedidos.Location = new System.Drawing.Point(4, 24);
             this.tabConsultarPedidos.Name = "tabConsultarPedidos";
             this.tabConsultarPedidos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsultarPedidos.Size = new System.Drawing.Size(885, 428);
+            this.tabConsultarPedidos.Size = new System.Drawing.Size(885, 433);
             this.tabConsultarPedidos.TabIndex = 1;
             this.tabConsultarPedidos.Text = "Consulta Pedidos";
             this.tabConsultarPedidos.UseVisualStyleBackColor = true;
@@ -630,7 +629,7 @@
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblPanelBase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tblPanelBase.Size = new System.Drawing.Size(879, 422);
+            this.tblPanelBase.Size = new System.Drawing.Size(879, 427);
             this.tblPanelBase.TabIndex = 2;
             // 
             // btnExcluirPedido
@@ -638,14 +637,14 @@
             this.btnExcluirPedido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExcluirPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluirPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.btnExcluirPedido.Location = new System.Drawing.Point(43, 387);
+            this.btnExcluirPedido.Location = new System.Drawing.Point(43, 392);
             this.btnExcluirPedido.Name = "btnExcluirPedido";
             this.btnExcluirPedido.Size = new System.Drawing.Size(793, 32);
             this.btnExcluirPedido.TabIndex = 5;
             this.btnExcluirPedido.Text = "Excluir";
             this.btnExcluirPedido.UseVisualStyleBackColor = true;
             this.btnExcluirPedido.Visible = false;
-            this.btnExcluirPedido.Click += new System.EventHandler(this.excluirPedidosToolStripMenuItem_Click);
+            this.btnExcluirPedido.Click += new System.EventHandler(this.btnExcluirPedidos_Click);
             // 
             // lstListaPedidos
             // 
@@ -658,18 +657,19 @@
             this.lstListaPedidos.Location = new System.Drawing.Point(43, 83);
             this.lstListaPedidos.MultiSelect = false;
             this.lstListaPedidos.Name = "lstListaPedidos";
-            this.lstListaPedidos.Size = new System.Drawing.Size(793, 298);
+            this.lstListaPedidos.Size = new System.Drawing.Size(793, 303);
             this.lstListaPedidos.TabIndex = 1;
             this.lstListaPedidos.UseCompatibleStateImageBehavior = false;
             this.lstListaPedidos.View = System.Windows.Forms.View.Details;
-            this.lstListaPedidos.SelectedIndexChanged += new System.EventHandler(this.lstListaPedidos_SelectedIndexChanged);
+            this.lstListaPedidos.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstListaPedidos_ItemSelectionChanged);
+            this.lstListaPedidos.Click += new System.EventHandler(this.btnExcluirPedidos_Click);
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.51402F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.485981F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel7.Controls.Add(this.btnBuscarPedidos, 2, 1);
             this.tableLayoutPanel7.Controls.Add(this.txtBuscarPedidos, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.lblBuscarPedidos, 0, 0);
@@ -701,7 +701,7 @@
             this.txtBuscarPedidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.txtBuscarPedidos.Location = new System.Drawing.Point(3, 26);
             this.txtBuscarPedidos.Name = "txtBuscarPedidos";
-            this.txtBuscarPedidos.Size = new System.Drawing.Size(611, 20);
+            this.txtBuscarPedidos.Size = new System.Drawing.Size(610, 16);
             this.txtBuscarPedidos.TabIndex = 5;
             // 
             // lblBuscarPedidos
@@ -710,7 +710,7 @@
             this.lblBuscarPedidos.ForeColor = System.Drawing.Color.Black;
             this.lblBuscarPedidos.Location = new System.Drawing.Point(3, 0);
             this.lblBuscarPedidos.Name = "lblBuscarPedidos";
-            this.lblBuscarPedidos.Size = new System.Drawing.Size(133, 20);
+            this.lblBuscarPedidos.Size = new System.Drawing.Size(105, 15);
             this.lblBuscarPedidos.TabIndex = 4;
             this.lblBuscarPedidos.Text = "Digite a sua busca:";
             // 
@@ -720,18 +720,17 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excluirPedidosToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(122, 28);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(110, 26);
             // 
             // excluirPedidosToolStripMenuItem
             // 
             this.excluirPedidosToolStripMenuItem.Name = "excluirPedidosToolStripMenuItem";
-            this.excluirPedidosToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.excluirPedidosToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.excluirPedidosToolStripMenuItem.Text = "Excluir";
-            this.excluirPedidosToolStripMenuItem.Click += new System.EventHandler(this.excluirPedidosToolStripMenuItem_Click);
             // 
             // FormPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -794,7 +793,6 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblFormaPagamento;
         private System.Windows.Forms.TableLayoutPanel tblPanel1;
-        private System.Windows.Forms.MaskedTextBox mtbIdCliente;
         private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label2;
@@ -817,10 +815,11 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.ComboBox cbxTipoDoce;
         private System.Windows.Forms.TableLayoutPanel tblPanel6;
-        private System.Windows.Forms.Button btnAtualizarCliente;
+        private System.Windows.Forms.Button btnAtualizarPedido;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnFazerPedido;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem excluirPedidosToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cbxNomeCliente;
     }
 }

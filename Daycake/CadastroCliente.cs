@@ -301,11 +301,6 @@ namespace Daycake
             excluir_cliente();
         }
 
-        private void lstListaClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNovo_Click(object sender, EventArgs e)
         {
             zerar_forms();

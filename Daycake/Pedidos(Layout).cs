@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -44,141 +45,241 @@ namespace Daycake
             lstListaPedidos.Columns.Add("Forma de Pagamento", 100);
             lstListaPedidos.Columns.Add("Status", 150);
 
+            lstTipoDoce.View = View.Details;
+            lstTipoDoce.Columns.Add("Tipo Doce", 200);
+            lstTipoDoce.Columns.Add("Preço", 80);
+            lstTipoDoce.Columns.Add("Quantidade", 100);
+
             carregar_pedido();
 
         }
 
         private void btnFazerPedido_Click_1(object sender, EventArgs e)
+        {            
+                ClienteItem clienteSelecionado = cbxNomeCliente.SelectedItem as ClienteItem;
+
+                if (clienteSelecionado == null)
+                {
+                    MessageBox.Show("Selecione um cliente válido.");
+                    return;
+                }
+
+                // Validação e conversão do valor monetário
+                decimal valor;
+                try
+                {
+                    string valorTexto = txtValor.Text.Replace("R$", "").Replace(" ", "").Trim();
+
+                    // Primeiro tenta converter com formato brasileiro (vírgula como decimal)
+                    if (!decimal.TryParse(valorTexto, NumberStyles.Currency, CultureInfo.GetCultureInfo("pt-BR"), out valor))
+                    {
+                        // Se falhar, tenta com formato internacional (ponto como decimal)
+                        if (!decimal.TryParse(valorTexto, NumberStyles.Any, CultureInfo.InvariantCulture, out valor))
+                        {
+                            MessageBox.Show("Formato de valor inválido. Use números com vírgula ou ponto decimal (ex: 125,99 ou 125.99)",
+                                          "Formato inválido",
+                                          MessageBoxButtons.OK,
+                                          MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao converter valor: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Obter a lista de doces como string formatada
+                string tiposDoces = ConcatenarDocesDoListView(lstTipoDoce);
+
+                try
+                {
+                    using (MySqlConnection conexao = new MySqlConnection(data_source))
+                    {
+                        conexao.Open();
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = conexao;
+
+                        // CORREÇÃO: A lógica estava invertida - quando id_pedido_selecionado é null, deve ser INSERT
+                        if (id_pedido_selecionado == null) // INSERIR novo pedido
+                        {
+                            cmd.CommandText = @"
+                                INSERT INTO pedido (
+                                    clienteid, 
+                                    nomeCliente, 
+                                    data_pedido, 
+                                    data_entrega, 
+                                    valor, 
+                                    tipo_de_doce, 
+                                    descricao, 
+                                    forma_pagamento, 
+                                    status
+                                ) 
+                                VALUES (
+                                    @clienteid, 
+                                    @nomeCliente, 
+                                    @data_pedido, 
+                                    @data_entrega, 
+                                    @valor, 
+                                    @tipoDoce, 
+                                    @descricao, 
+                                    @forma_pagamento, 
+                                    @status
+                                )";
+
+                            cmd.Parameters.AddWithValue("@clienteid", clienteSelecionado.IDCliente);
+                            cmd.Parameters.AddWithValue("@nomeCliente", clienteSelecionado.nomeCliente);
+                            cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
+                            cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
+                            cmd.Parameters.AddWithValue("@valor", valor);
+                            cmd.Parameters.AddWithValue("@tipoDoce", tiposDoces);
+                            cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                            cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
+                            cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Pedido cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else // ATUALIZAR pedido existente
+                        {
+                            cmd.CommandText = @"
+                                UPDATE pedido 
+                                SET 
+                                    clienteid = @clienteid, 
+                                    nomeCliente = @nomeCliente,
+                                    data_pedido = @data_pedido, 
+                                    data_entrega = @data_entrega, 
+                                    valor = @valor, 
+                                    tipo_de_doce = @tipoDoce, 
+                                    descricao = @descricao, 
+                                    forma_pagamento = @forma_pagamento, 
+                                    status = @status 
+                                WHERE idPedido = @idPedido";
+
+                            cmd.Parameters.AddWithValue("@clienteid", clienteSelecionado.IDCliente);
+                            cmd.Parameters.AddWithValue("@nomeCliente", clienteSelecionado.nomeCliente);
+                            cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
+                            cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
+                            cmd.Parameters.AddWithValue("@valor", valor);
+                            cmd.Parameters.AddWithValue("@tipoDoce", tiposDoces);
+                            cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                            cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
+                            cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
+                            cmd.Parameters.AddWithValue("@idPedido", id_pedido_selecionado);
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Pedido atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        // Atualiza a lista e limpa os campos
+                        carregar_pedido();
+                        zerar_forms();
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Erro no banco de dados: {ex.Message}\nCódigo: {ex.Number}",
+                                   "Erro",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro inesperado: {ex.Message}",
+                                   "Erro",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                }
+            }
+
+            private void txtValor_Leave(object sender, EventArgs e)
         {
-            ClienteItem clienteSelecionado = cbxNomeCliente.SelectedItem as ClienteItem;
-
-            if (clienteSelecionado == null)
+            if (decimal.TryParse(txtValor.Text.Replace("R$", "").Trim(),
+                NumberStyles.Currency,
+                CultureInfo.GetCultureInfo("pt-BR"),
+                out decimal valor))
             {
-                MessageBox.Show("Cliente inválido.");
-                return;
-            }
-
-            int clienteId = clienteSelecionado.IDCliente;
-
-            try
-            {
-
-                using (MySqlConnection conexao = new MySqlConnection("datasource=localhost;username=root;password=;database=daycake"))
-                {
-                    conexao.Open();
-                    MySqlCommand cmd = new MySqlCommand();
-                    cmd.Connection = conexao;
-
-                    if (id_pedido_selecionado == null)
-                    {
-                        cmd.CommandText =
-                            "UPDATE pedido SET clienteid = @clienteid, data_pedido = @data_pedido, data_entrega = @data_entrega, valor = @valor, " +
-                            "tipo_de_doce = @tipoDoce, descricao = @descricao, forma_pagamento = @forma_pagamento, status = @status " +
-                            "WHERE idPedido = @idPedido";
-
-
-                        cmd.Parameters.AddWithValue("@clienteid", clienteId);
-                        cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
-                        cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
-                        cmd.Parameters.AddWithValue("@valor", decimal.Parse(txtValor.Text,
-                        NumberStyles.Currency, CultureInfo.CurrentCulture));
-                        cmd.Parameters.AddWithValue("@tipoDoce", lstTipoDoce.Text);
-                        cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                        cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
-                        cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Pedido Inserido com Sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        cmd.CommandText =
-                        "UPDATE pedido SET clienteid = @clienteid, data_pedido = @data_pedido, data_entrega = @data_entrega, valor = *valor " +
-                        "tipo_de_doce = @tipoDoce, descricao = @descricao, forma_pagamento = @forma_pagamento, status = @status " +
-                        "WHERE idPedido = @idPedido";
-
-                        cmd.Parameters.AddWithValue("@clienteid", clienteId);
-                        cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
-                        cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
-                        cmd.Parameters.AddWithValue("@valor", decimal.Parse(txtValor.Text, NumberStyles.Currency, CultureInfo.CurrentCulture));
-                        cmd.Parameters.AddWithValue("@tipoDoce", lstTipoDoce.Text);
-                        cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                        cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
-                        cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
-                        cmd.Parameters.AddWithValue("@idPedido", id_pedido_selecionado);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Pedido Atualizado com Sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Erro ao cadastrar pedido: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro inesperado: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (Conexao != null && Conexao.State == ConnectionState.Open)
-                {
-                    Conexao.Close();
-                }
+                txtValor.Text = valor.ToString("C2", CultureInfo.GetCultureInfo("pt-BR"));
             }
         }
-
 
         private void carregar_pedido()
         {
-            try
             {
-                Conexao = new MySqlConnection(data_source);
-
-                string sql = "SELECT * FROM pedido ORDER BY idPedido ASC";
-
-                Conexao.Open();
-
-                MySqlCommand buscar = new MySqlCommand(sql, Conexao);
-
-                MySqlDataReader reader = buscar.ExecuteReader();
-
-                lstListaPedidos.Items.Clear();
-
-                while (reader.Read())
+                try
                 {
-                    string[] row =
+                    Conexao = new MySqlConnection(data_source);
+                    // Consulta com JOIN para obter o nome do cliente corretamente
+                    string sql = @"SELECT p.idPedido, p.clienteid, c.nome AS nomeCliente, 
+                      p.data_pedido, p.data_entrega, p.valor, 
+                      p.tipo_de_doce, p.descricao, p.forma_pagamento, p.status 
+                      FROM pedido p
+                      LEFT JOIN cliente c ON p.clienteid = c.idCliente
+                      ORDER BY p.idPedido ASC";
+
+                    Conexao.Open();
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    MySqlDataReader reader = buscar.ExecuteReader();
+
+                    lstListaPedidos.Items.Clear();
+
+                    while (reader.Read())
                     {
-                        //reader.GetInt32(0).ToString(), //id pedido
-                        reader.GetInt32(1).ToString(), // id cliente
-                        reader.GetString(2), // data pedido
-                        reader.GetString(3), // data entrega
-                        reader.GetString(4), // valor
-                        reader.GetString(5), // tipo doce
-                        reader.GetString(6), // observação
-                        reader.GetString(7), // forma pagamento
-                    };
+                        try
+                        {
+                            string[] row =
+                            {
+                    reader["idPedido"].ToString(),
+                    reader["clienteid"].ToString(),
+                    reader["nomeCliente"] != DBNull.Value ? reader["nomeCliente"].ToString() : "N/A",
+                    reader["data_pedido"].ToString(),
+                    reader["data_entrega"].ToString(),
+                    reader["valor"] != DBNull.Value ?
+                        Convert.ToDecimal(reader["valor"]).ToString("C2", CultureInfo.GetCultureInfo("pt-BR")) : "R$ 0,00",
+                    reader["tipo_de_doce"].ToString(),
+                    reader["descricao"].ToString(),
+                    reader["forma_pagamento"].ToString(),
+                    reader["status"].ToString()
+                };
 
-                    var linha_list_view = new ListViewItem(row);
-                    lstListaPedidos.Items.Add(linha_list_view);
+                            var linha_list_view = new ListViewItem(row);
+                            lstListaPedidos.Items.Add(linha_list_view);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Log do erro sem interromper o carregamento
+                            Debug.WriteLine($"Erro ao processar registro: {ex.Message}");
+                        }
+                    }
                 }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Erro no banco de dados: {ex.Message}\nCódigo: {ex.Number}",
+                                  "Erro",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao carregar pedidos: {ex.Message}",
+                                  "Erro",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (Conexao != null && Conexao.State == ConnectionState.Open)
+                    {
+                        Conexao.Close();
+                    }
+                }
             }
         }
 
-      
-        private void FormPedido_Load(object sender, EventArgs e)
+
+
+            private void FormPedido_Load(object sender, EventArgs e)
         {
             cbxNomeCliente.DropDownStyle = ComboBoxStyle.DropDown;
 
@@ -358,7 +459,7 @@ namespace Daycake
         private void zerar_forms()
         {
             id_pedido_selecionado = null;
-            //txtNomeCliente.Clear();
+
             cbxNomeCliente.Text = "";
             mtbDataPedido.Text = "";
             mtbDataEntrega.Text = "";
@@ -366,10 +467,9 @@ namespace Daycake
             txtDescricao.Text = "";
             lstTipoDoce.Items.Clear();
             cbxFormaPagamento.SelectedIndex = -1;
-            cbxStatus.SelectedIndex = -1;
+            cbxStatus.SelectedIndex = -1; 
 
 
-            // txtNomeCliente.Focus();
 
         }
 
@@ -437,7 +537,7 @@ namespace Daycake
 
         }
 
-    
+
 
         private void lstTipoDoce_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -461,7 +561,7 @@ namespace Daycake
                 {
                     string[] row =
                     {
-                       // reader.GetInt32(0).ToString(),  //id pedido
+                        reader.GetInt32(0).ToString(),  //id pedido
                         reader.GetInt32(1).ToString(),  // id cliente
                         reader.GetString(2),  // data pedido
                         reader.GetString(3),  // data entrega
@@ -469,6 +569,7 @@ namespace Daycake
                         reader.GetString(5),  // tipo doce
                         reader.GetString(6),  // observação
                         reader.GetString(7),  // forma pagamento
+                        reader.GetString(8),  // forma pagamento
                        };
                     var linha_list_view = new ListViewItem(row);
                     lstListaPedidos.Items.Add(linha_list_view);
@@ -492,7 +593,7 @@ namespace Daycake
             excluir_pedido();
         }
 
-    
+
         private void AtualizarValorTotal()
         {
             decimal total = 0;
@@ -510,7 +611,7 @@ namespace Daycake
 
         private void cbxNomeCliente_TextChangedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void cbxNomeCliente_Enter(object sender, EventArgs e)
@@ -578,45 +679,33 @@ namespace Daycake
 
             try
             {
+                decimal valor;
+                string textoLimpo = txtValor.Text.Replace("R$", "").Trim();
 
-                if (id_pedido_selecionado == null)
+                if (!decimal.TryParse(textoLimpo, NumberStyles.Currency, CultureInfo.CurrentCulture, out valor))
                 {
-                    MessageBox.Show("Selecione um cliente para atualizar.",
-                                   "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Valor inválido. Verifique o campo 'Valor'.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO pedidos (clienteid, data_pedido, data_entrega, valor, tipoDoce, descricao, forma_pagamento, status) VALUES (@clienteid, @data_pedido, @data_entrega, @valor, @tipoDoce, @descricao, @forma_pagamento, @status)");
+
+
+                cmd.Parameters.AddWithValue("@clienteid", cbxNomeCliente.SelectedItem);
+                
+                cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
+                cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
+                cmd.Parameters.AddWithValue("@valor", valor);  // <- valor validado
+                cmd.Parameters.AddWithValue("@tipoDoce", lstTipoDoce.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
+                cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
+
 
                 Conexao = new MySqlConnection(data_source);
                 Conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = Conexao;
-
-
-                cmd.CommandText =
-
-                    "UPDATE pedido SET " +
-                    "clienteid = @clienteid, " +
-                    "data_pedido = @data_pedido, " +
-                    "data_entrega = @data_entrega, " +
-                    "valor = @valor, " +
-                    "tipo_de_doce = @tipoDoce, " +
-                    "descricao = @descricao, " +
-                    "forma_pagamento = @forma_pagamento, " +
-                    "status = @status " +
-                    "WHERE idPedido = @id";
-
-                //cmd.Parameters.AddWithValue("@clienteid", txtNomeCliente.Text);
-                cmd.Parameters.AddWithValue("@clienteid", cbxNomeCliente.Text);
-                cmd.Parameters.AddWithValue("@data_pedido", mtbDataPedido.Text);
-                cmd.Parameters.AddWithValue("@data_entrega", mtbDataEntrega.Text);
-                cmd.Parameters.AddWithValue("@valor", txtValor.Text);
-                string tipoDeDoceConcatenado = ConcatenarDocesDoListView(lstTipoDoce);
-                cmd.Parameters.AddWithValue("@tipoDoce", tipoDeDoceConcatenado);
-                cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@forma_pagamento", cbxFormaPagamento.Text);
-                cmd.Parameters.AddWithValue("@status", cbxStatus.Text);
-                cmd.Parameters.AddWithValue("@id", id_pedido_selecionado);
 
                 cmd.ExecuteNonQuery();
 
@@ -641,29 +730,134 @@ namespace Daycake
 
         }
 
-     
+
         private void lstListaPedidos_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {            
+                if (lstListaPedidos.SelectedItems.Count == 0) return;
+
+                try
+                {
+                    ListViewItem item = lstListaPedidos.SelectedItems[0];
+
+                    id_pedido_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+
+                    // Preenche os campos do formulário
+                    cbxNomeCliente.Text = item.SubItems[2].Text; // Nome do cliente está no índice 2 agora
+                    mtbDataPedido.Text = item.SubItems[3].Text;
+                    mtbDataEntrega.Text = item.SubItems[4].Text;
+                    txtValor.Text = item.SubItems[5].Text;
+                    txtDescricao.Text = item.SubItems[7].Text;
+
+                    // Limpa e adiciona os itens do tipo de doce
+                    lstTipoDoce.Items.Clear();
+                    string[] doces = item.SubItems[6].Text.Split(';');
+                    foreach (string doce in doces)
+                    {
+                        if (!string.IsNullOrWhiteSpace(doce))
+                        {
+                            lstTipoDoce.Items.Add(new ListViewItem(doce.Trim()));
+                        }
+                    }
+
+                    cbxFormaPagamento.Text = item.SubItems[8].Text;
+                    cbxStatus.Text = item.SubItems[9].Text;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao carregar pedido: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        
+
+        private void AtualizarTotalGeral()
         {
-            ListView.SelectedListViewItemCollection itens_selecionados = lstListaPedidos.SelectedItems;
+            decimal totalGeral = 0;
 
-
-            foreach (ListViewItem item in itens_selecionados)
+            foreach (ListViewItem item in lstTipoDoce.Items)
             {
-                id_pedido_selecionado = Convert.ToInt32(item.SubItems[0].Text);
-                cbxNomeCliente.Text = item.SubItems[1].Text;
-                mtbDataPedido.Text = item.SubItems[2].Text;
-                mtbDataEntrega.Text = item.SubItems[3].Text;
-                txtValor.Text = item.SubItems[4].Text;
-                txtDescricao.Text = item.SubItems[5].Text;
-                lstTipoDoce.Text = item.SubItems[6].Text;
-                cbxFormaPagamento.Text = item.SubItems[7].Text;
-                cbxStatus.Text = item.SubItems[8].Text;
+                if (item.SubItems.Count >= 4 &&
+                    decimal.TryParse(item.SubItems[1].Text.Replace("R$", "").Trim(), out decimal preco) &&
+                    int.TryParse(item.SubItems[2].Text, out int quantidade))
+                {
+                    decimal totalItem = preco * quantidade;
+                    item.SubItems[3].Text = totalItem.ToString("C"); // Atualiza o valor total do item
+                    totalGeral += totalItem;
 
+                }
+            }
+            txtValor.Text = totalGeral.ToString("C");
+
+        }
+
+        private decimal ConverterValorMonetario(string valorTexto)
+        {
+            // Remove símbolos de moeda e espaços
+            valorTexto = valorTexto.Replace("R$", "").Replace(" ", "").Trim();
+
+            // Tenta converter considerando o formato brasileiro
+            if (decimal.TryParse(valorTexto, NumberStyles.Currency, CultureInfo.GetCultureInfo("pt-BR"), out decimal valor))
+            {
+                return valor;
             }
 
-            btnExcluirPedido.Visible = true; // Exibe o botão de exclusão
+            // Tenta converter com formato invariante como fallback
+            if (decimal.TryParse(valorTexto, NumberStyles.Any, CultureInfo.InvariantCulture, out valor))
+            {
+                return valor;
+            }
+
+            throw new FormatException("Formato de valor inválido. Use números com vírgula decimal (ex: 125,99)");
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            if (lstTipoDoce.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Selecione um item no ListView.");
+                return;
+            }
+
+            if (!int.TryParse(txtQuantidade.Text, out int novaQuantidade) || novaQuantidade < 1)
+            {
+                MessageBox.Show("Digite uma quantidade válida.");
+                return;
+            }
+
+            ListViewItem itemSelecionado = lstTipoDoce.SelectedItems[0];
+
+            if (itemSelecionado.SubItems.Count < 3)
+            {
+                itemSelecionado.SubItems.Add(novaQuantidade.ToString());
+            }
+            else
+            {
+                itemSelecionado.SubItems[2].Text = novaQuantidade.ToString();
+            }
+
+            AtualizarTotalGeral();
+        }
+
+        private void lstTipoDoce_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = lstTipoDoce.HitTest(e.Location);
+
+            if (info.Item != null && info.SubItem != null)
+            {
+                int subItemIndex = info.Item.SubItems.IndexOf(info.SubItem);
+
+                if (subItemIndex == 2) // coluna da quantidade
+                {
+                    txtQuantidade.Text = info.SubItem.Text;
+                    txtQuantidade.Visible = true;
+                    txtQuantidade.Focus();
+                    txtQuantidade.SelectAll();
+
+                    // Opcional: seleciona o item
+                    info.Item.Selected = true;
+                }
+            }
         }
     }
-    
+
 }
 
